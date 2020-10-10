@@ -14,14 +14,16 @@ class Animals extends Migration
     public function up()
     {
         Schema::create('animals', function (Blueprint $table) {
-            $table->id('id_animal');
+            $table->bigIncrements('id_animal');
             $table->integer('nr_age');
-            $table->string('nm_name');   
+            $table->string('nm_name');
+            $table->string('ds_genre');   
             $table->string('ds_species');
             $table->string('ds_breed');
             $table->string('ds_email');
             $table->string('ds_bio');
             $table->dateTime('dt_data_publish');
+            $table->timestamps();
         });
     }
 
