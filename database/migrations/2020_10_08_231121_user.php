@@ -24,6 +24,7 @@ class User extends Migration
             $table->string('ds_email');
             $table->string('ds_bio');
             $table->dateTime('dt_birth');
+            $table->timestamps();
         });
     }
 
