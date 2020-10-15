@@ -1,0 +1,9 @@
+#main-content .color-theme-1 {
+  background-color: #FF9191 !important;
+  color: white;
+}
+
+#main-content .color-theme-1:hover {
+  background-color: #fc6969 !important;
+  color: white;
+}

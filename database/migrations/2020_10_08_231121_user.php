@@ -20,7 +20,7 @@ class User extends Migration
             $table->string('ds_complement');
             $table->string('nm_neighborhood');
             $table->integer('nr_cep');
-            $table->integer('nr_phone');
+            $table->string('nr_phone');
             $table->string('ds_email');
             $table->string('ds_bio');
             $table->dateTime('dt_birth');
