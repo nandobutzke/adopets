@@ -26,7 +26,7 @@
       </div>
       <div class="col text-center">
 
-        <form method="post" action="chamaFuncao">
+        <!-- <form method="post" action="chamaFuncao">
           <h2 class="mb-3">Cadastro de usuário</h2>
           @csrf
           <input type="text" name="nm_user" placeholder="Nome de usuário"><br>
@@ -40,7 +40,7 @@
           <input type="date" name="dt_birth" placeholder="Data de nascimento"><br>
           <input type="password" name="password" placeholder="Senha"><br>
           <button type="submit">Lá vai</button>
-        </form>
+        </form> -->
 
       </div>
     </div>
