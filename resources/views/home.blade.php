@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
   <link rel="stylesheet" href="/css/style.css">
 
 </head>
+
 <body id="main-content">
+
   <div class="container mt-5">
     <div class="row align-items-center text-center">
       <div class="col">
@@ -27,7 +30,7 @@
       <div class="col text-center">
 
         <form method="post" action="chamaFuncao">
-        
+
           <h2 class="mb-3">Cadastro de usuário</h2>
           @csrf
           <input type="text" name="nm_user" placeholder="Nome de usuário"><br>
@@ -41,11 +44,11 @@
           <input type="date" name="dt_birth" placeholder="Data de nascimento"><br>
           <input type="password" name="password" placeholder="Senha"><br>
           <button type="submit">Lá vai</button>
-         
+
         </form>
 
         @foreach($user as $users)
-          <p>{{ $users['ds_email'] }}</p>
+        <p>{{ $users['ds_email'] }}</p>
         @endforeach
 
       </div>
@@ -55,4 +58,5 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
+
 </html>
