@@ -20,9 +20,8 @@ class Animals extends Migration
             $table->string('ds_genre');   
             $table->string('ds_species');
             $table->string('ds_breed');
-            $table->string('ds_email');
             $table->string('ds_bio');
-            $table->dateTime('dt_data_publish');
+            $table->dateTime('dt_born');
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id_user')->on('user');
             $table->timestamps();

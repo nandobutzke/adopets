@@ -10,7 +10,7 @@ class animals extends Model
 
     protected $table = 'animals';
     protected $primaryKey = 'id_animal';
-    protected $fillable = ['nr_age', 'nm_name', 'ds_genre', 'ds_species', 'ds_breed', 'ds_email', 'ds_bio', 'dt_data_publish', 'id_user'];
+    protected $fillable = ['nr_age', 'nm_name', 'ds_genre', 'ds_species', 'ds_breed', 'ds_bio', 'dt_born', 'id_user'];
 
     use HasFactory;
 }
