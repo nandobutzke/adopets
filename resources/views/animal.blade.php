@@ -26,7 +26,7 @@
         </form>
       </div>
       <div class="col text-center">
-        <h1>Animais</h1>
+       <!--  <h1>Animais</h1>
           @foreach($animal as $animals)
             <p>Nome do Animal: {{ $animal['nm_name'] }}</p>
             <p>Idade do Animal: {{ $animal['nr_age'] }}</p>
@@ -35,7 +35,7 @@
             <p>Raça: {{ $animal['ds_breed'] }}</p>
             <p>Bio: {{ $animal['ds_bio'] }}</p>
             <p>Data de nascimento: {{ $animal['dt_born'] }}</p>
-          @endforeach
+          @endforeach -->
       </div>
     </div>
   </div>
