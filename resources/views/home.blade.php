@@ -48,7 +48,7 @@
         </form>
 
         @foreach($user as $users)
-        <p>{{ $users['ds_email'] }}</p>
+          <p>{{ $users['ds_email'] }}</p>
         @endforeach
 
       </div>

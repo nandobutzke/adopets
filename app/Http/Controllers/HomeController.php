@@ -40,5 +40,4 @@ class HomeController extends Controller
         $user = user::get();
         return view('home', compact('user'));
     }
-
 }
