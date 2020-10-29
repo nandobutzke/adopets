@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adotar</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <form method="post" action="animal">
+        <form method="post" action="cadastrarAnimal">
 
           <h2 class="mb-3">Cadastro de animal</h2>
           @csrf
@@ -24,18 +26,11 @@
           <input type="date" name="dt_born" placeholder="Data de nascimento"><br>
           <button type="submit">Cadastrar</button>
         </form>
-      </div>
-      <div class="col text-center">
-       <!--  <h1>Animais</h1>
-          @foreach($animal as $animals)
-            <p>Nome do Animal: {{ $animal['nm_name'] }}</p>
-            <p>Idade do Animal: {{ $animal['nr_age'] }}</p>
-            <p>Espécie do animal: {{ $animal['ds_species'] }}</p>
-            <p>Gênero do animal: {{ $animal['ds_genre'] }}</p>
-            <p>Raça: {{ $animal['ds_breed'] }}</p>
-            <p>Bio: {{ $animal['ds_bio'] }}</p>
-            <p>Data de nascimento: {{ $animal['dt_born'] }}</p>
-          @endforeach -->
+
+        @foreach($animals as $animal)
+          <a href="/animal/{{ $animal['id_animal'] }}">Ver mais sobre o {{ $animal['nm_name'] }}</a>
+        @endforeach
+
       </div>
     </div>
   </div>

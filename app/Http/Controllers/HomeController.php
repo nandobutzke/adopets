@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     //
 
-    public function funcao(Request $req) {
+    public function userRegister(Request $req) {
         
         $user = new user();
         $user->fill($req->all());
@@ -20,24 +20,29 @@ class HomeController extends Controller
         return $user;
     }
 
-    public function animal(Request $req) {
+    public function animalRegister(Request $req) {
         $animal = new animals();
         $req['id_user'] = 1;
         $animal->fill($req->all());
         $animal->save();
 
-        return $animal;
+        return redirect('/adocao');     //Return a JSON with animal informations
     }
 
     //loadPages
 
     public function loadAnimal(Request $req) {
-        $animal = animals::get();
-        return view('animal', compact('animal'));
+        $animals = animals::get();
+        return view('animal', compact('animals'));
     }
 
     public function loadHome(Request $req) {
         $user = user::get();
         return view('home', compact('user'));
+    }
+
+    public function consultarAnimal(Request $req) {
+        $animal = animals::find($req->id);
+        return view('animalResults', compact('animal'));
     }
 }
