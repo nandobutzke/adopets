@@ -14,11 +14,16 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+//Register User & Animal
 Route::post('cadastrarUsuario', [HomeController::class, 'userRegister']);
 Route::post('cadastrarAnimal', [HomeController::class, 'animalRegister']);
 
 
+//Get animal locations
 Route::get('/', [HomeController::class, 'loadHome']);
-Route::get('/adocao', [HomeController::class, 'loadAnimal']);
+Route::get('/cadastro-animal', [HomeController::class, 'loadRegister']);
+Route::get('/adocao', [HomeController::class, 'adoptAnimal']);
 
+
+//Results Routes
 Route::get('/animal/{id}', [HomeController::class, 'consultarAnimal']);

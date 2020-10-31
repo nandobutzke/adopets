@@ -7,3 +7,85 @@
   background-color: #fc6969 !important;
   color: white;
 }
+
+#animal-list .card-animal {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+#animal-list .card-animal .card-animal-link {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: black;
+}
+
+#animal-list .card-animal .card-animal-link .card-animal-hover {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black !important;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity ease-in-out 0.25s;
+  text-decoration: none;
+  color: orange !important;
+}
+
+#animal-list .card-animal .card-animal-link .card-animal-img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#animal-list .card-animal .card-animal-link .card-animal-hover .card-animal-hover-content {
+  font-size: 1.25rem;
+  color: white;
+}
+
+#animal-list .card-animal .card-animal-link:hover .card-animal-hover {
+  opacity: 0.7;
+}
+
+.zoom {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.zoom img {
+	max-width: 100%;
+  transition: all 0.5s;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 3px solid #FF9191;
+}
+
+.zoom:hover img {
+  opacity: 0.3;
+  transform: scale(1.1);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+

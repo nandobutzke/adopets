@@ -31,18 +31,25 @@ class HomeController extends Controller
 
     //loadPages
 
-    public function loadAnimal(Request $req) {
+    public function loadRegister(Request $req) {
         $animals = animals::get();
-        return view('animal', compact('animals'));
+        return view('landing/animalRegister', compact('animals'));
     }
 
     public function loadHome(Request $req) {
         $user = user::get();
-        return view('home', compact('user'));
+        return view('landing/home', compact('user'));
     }
+
+    public function adoptAnimal() {
+        $animal = animals::get();
+        return view('landing/adoption', compact('animal'));
+    }
+
+    //Results animals
 
     public function consultarAnimal(Request $req) {
         $animal = animals::find($req->id);
-        return view('animalResults', compact('animal'));
+        return view('landing/animalResults', compact('animal'));
     }
 }
