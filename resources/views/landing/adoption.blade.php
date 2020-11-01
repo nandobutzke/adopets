@@ -1,6 +1,7 @@
 @extends('LayoutLanding')
 @section('middleContent')
 
+
 <div id="animal-list" class="container">
   <div class="row">
     @foreach($animal as $animals)

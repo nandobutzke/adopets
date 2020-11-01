@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 #main-content .color-theme-1 {
   background-color: #FF9191 !important;
   color: white;
@@ -6,6 +8,53 @@
 #main-content .color-theme-1:hover {
   background-color: #fc6969 !important;
   color: white;
+}
+
+#main-content .color-theme-2 {
+  background-color: #fc6969 !important;
+  color: white;
+}
+
+#main-content .color-theme-2:hover {
+  background-color: #fd4343 !important;
+  color: white;
+}
+
+.menu .menu-item .menu-link {
+  color: #FF9191 !important;
+}
+
+.menu .menu-item .menu-link:hover {
+  transition: all 0.3s;
+  color: #fc6969 !important;
+}
+
+.placeholder-input {
+  background-color: #fc6969 !important;
+}
+
+::-webkit-input-placeholder {
+  color: #fc6969 !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #fc6969 !important;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #fc6969 !important;  
+}
+
+:-ms-input-placeholder {  
+  color: #fc6969 !important;  
+}
+
+.input-animal input {
+  border: 1px solid #FF9191 !important;
+}
+
+.input-animal textarea {
+  border: 1px solid #FF9191;
 }
 
 #animal-list .card-animal {
@@ -84,7 +133,21 @@
   border-bottom-right-radius: 10px;
 }
 
+.animal-register-title {
+  font-family: 'Fredoka One';
+  color: #fc6969;
+  font-size: 4rem;
+}
 
+.animal-list-link {
+  color: #FF9191;
+  text-decoration: none;
+}
+
+.animal-list-link:hover {
+  color: #fd4343;
+  text-decoration: none;
+}
 
 
 
