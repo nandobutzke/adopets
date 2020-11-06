@@ -2,7 +2,7 @@
 @section('middleContent')
 
 <div class="container mt-5 mb-5">
-  <div class="row">
+  <div class="row align-items-center">
     <div class="col-12 col-md-6 text-center">
       <!-- <form method="post" action="cadastrarAnimal">
 
@@ -41,10 +41,14 @@
           <textarea style="resize: none" type="text" name="ds_bio" aria-label="First name" placeholder="Bio" class="form-control"></textarea>
         </div>
         <div class="input-group input-animal mt-4">
-          <input type="date" name="dt_born" aria-label="Date born"  class="form-control">
+          <input type="date" name="dt_born" aria-label="Date born" class="form-control">
         </div>
-        <div class="input-group input-animal mt-4">
-          <input type="file" name="" aria-label="File" placeholder="" class="form-control">
+        <div class="input-group input-animal mb-3 mt-4">
+          <div class="custom-file">
+            <label class="file-input-label" for="photo">Escolha um arquivo</label>
+            <input type="file" name="photo" class="custom-file-input" placeholder="Escolha um arquivo" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+          </div>  
+          
         </div>
 
         <button type="submit" class="btn color-theme-2 mt-4 mb-4 text-left">Postar</button>
@@ -56,7 +60,7 @@
       @endforeach -->
 
     </div>
-    <div class="col-12 col-md-6 justify-content-end text-right">
+    <div class="col-12 col-md-6 justify-content-end text-right d-none d-md-block">
       <img height="600px" src="/img/patas.png" alt="">
     </div>
   </div>

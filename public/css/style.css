@@ -37,11 +37,11 @@
   color: #fc6969 !important;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder { 
   color: #fc6969 !important;  
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder { 
   color: #fc6969 !important;  
 }
 
@@ -149,6 +149,48 @@
   text-decoration: none;
 }
 
+.input-group {
 
+}
 
+.input-group label {
+  width: 50%;
+}
+
+.input-group input {
+  width: 100%;
+}
+
+#file-upload-button {
+  background: none;
+  border: none;
+}
+
+.custom-file {
+  border: 1px solid #FF9191 !important;
+  border-radius: 4px;
+}
+
+.custom-file .file-input-label {
+  padding-top: 3px;
+  padding-left: 2px;
+  /* width: 100%; */
+  color: #fc6969;
+}
+
+.custom-file-input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin: 0;
+  opacity: 0 !important;
+}
+
+.modal-header {
+  border: none !important;
+}
+
+.modal-fotter {
+  border: none !important;
+}
 
