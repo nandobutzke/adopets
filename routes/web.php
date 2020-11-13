@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +23,10 @@ Route::post('cadastrarAnimal', [HomeController::class, 'animalRegister']);
 Route::get('/', [HomeController::class, 'loadHome']);
 Route::get('/cadastro-animal', [HomeController::class, 'loadRegister']);
 Route::get('/adocao', [HomeController::class, 'adoptAnimal']);
+Route::get('/acessar', [HomeController::class, 'loadLogin']);
 
 
 //Results Routes
 Route::get('/animal/{id}', [HomeController::class, 'consultarAnimal']);
+Route::post('/login', [LoginController::class, 'autenticarLogin']);
+

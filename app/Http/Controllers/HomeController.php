@@ -46,10 +46,25 @@ class HomeController extends Controller
         return view('landing/adoption', compact('animal'));
     }
 
+    public function loadLogin() {
+        $user = user::get();
+        return view('landing/login', compact('user'));
+    }
+
     //Results animals
 
     public function consultarAnimal(Request $req) {
         $animal = animals::find($req->id);
         return view('landing/animalResults', compact('animal'));
     }
+
+    //Update db
+
+    public function alterarAnimal(Request $req) {
+        $animal = animals::find($req['id_animal']);
+        $animal->save();
+        return redirect('/');
+    }
+
+
 }

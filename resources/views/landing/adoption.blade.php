@@ -7,7 +7,7 @@
     @foreach($animal as $animals)
     <div class="col-md-4">
       <div class="card card-animal" style="width: 18rem;">
-        <a class="card-animal-link zoom" data-toggle="modal" data-target="#{{ $animals['id'] }}">
+        <a class="card-animal-link zoom" data-toggle="modal" data-target="#{{ $animals['nm_name'] }}">
           <div class="card-animal-hover">
             <div class="card-animal-hover-content"><i class="fas fa-plus fa-3x"></i></div>
           </div>
@@ -21,7 +21,7 @@
 
 <!-- Modal -->
 @foreach($animal as $animals)
-<div class="modal fade" id="{{ $animals['id'] }}" tabindex="-1" aria-labelledby="animalsLabel" aria-hidden="true">
+<div class="modal fade" id="{{ $animals['nm_name'] }}" tabindex="-1" aria-labelledby="animalsLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -42,11 +42,11 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
+
 @endforeach
 <!-- End Modal -->
 

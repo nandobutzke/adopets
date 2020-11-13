@@ -55,6 +55,10 @@
       </form>
 
 
+      <!-- <form action="alterarAnimal" method="post">
+        <button type="submit">Altera</button>
+      </form>
+ -->
       <!-- @foreach($animals as $animal)
       <a href="/animal/{{ $animal['id_animal'] }}">Ver mais sobre o {{ $animal['nm_name'] }}</a>
       @endforeach -->

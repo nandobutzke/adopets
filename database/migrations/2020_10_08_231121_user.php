@@ -21,7 +21,8 @@ class User extends Migration
             $table->string('nm_neighborhood');
             $table->integer('nr_cep');
             $table->string('nr_phone');
-            $table->string('ds_email');
+            $table->string('ds_email', 60)->unique();
+            $table->string('ds_password');
             $table->string('ds_bio');
             $table->dateTime('dt_birth');
             $table->timestamps();

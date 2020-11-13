@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+body {
+  height: 100%;
+  width: 100%;
+}
+
 #main-content .color-theme-1 {
   background-color: #FF9191 !important;
   color: white;
@@ -194,3 +199,34 @@
   border: none !important;
 }
 
+.container-login {
+  margin-top: 12.5%;
+}
+
+.container-login .row-login .col-login form {
+  padding: 1.5rem;
+  
+  border-radius: 10px;
+  box-shadow: 0 0 1em #fd4343;
+}
+
+.container-login .row-login .col-login form input {
+  background-color: #ffd5d5;
+}
+
+.container-login .row-login .col-login form label { 
+  color: #FF9191;
+}
+
+.container-login .row-login .col-login form input:-internal-autofill-selected {
+  background-color: #ffd5d5;
+}
+
+.container-login .row-login .col-login form .btn-login {
+  background-color: #fc6969;
+  color: white;
+}
+
+.container-login .row-login .col-login form .btn-login:hover {
+  background-color: #fd5a5a;
+}

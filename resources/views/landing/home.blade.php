@@ -31,7 +31,7 @@
           <input type="text" name="nr_phone" placeholder="Número de telefone"><br>
           <input type="text" name="ds_bio" placeholder="Bio"><br>
           <input type="date" name="dt_birth" placeholder="Data de nascimento"><br>
-          <input type="password" name="password" placeholder="Senha"><br>
+          <input type="password" name="ds_password" placeholder="Senha"><br>
           <button type="submit">Lá vai</button>
 
         </form>
