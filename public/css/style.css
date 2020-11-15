@@ -34,6 +34,26 @@ body {
   color: #fc6969 !important;
 }
 
+.logo-img img {
+  text-align: left !important;
+}
+
+@media(max-width: 1200px) {
+  .logon-img {
+    text-align: center !important;
+  }
+
+  .logo-img img {
+    width: 95%;
+    height: 95%;
+  }
+
+  .buttons-home {
+    text-align: center !important;
+  }
+}
+
+
 .placeholder-input {
   background-color: #fc6969 !important;
 }

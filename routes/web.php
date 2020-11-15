@@ -21,7 +21,8 @@ Route::post('cadastrarAnimal', [HomeController::class, 'animalRegister']);
 
 //Get animal locations
 Route::get('/', [HomeController::class, 'loadHome']);
-Route::get('/cadastro-animal', [HomeController::class, 'loadRegister']);
+Route::get('/cadastro-usuario', [HomeController::class, 'loadUserRegister']);
+Route::get('/cadastro-animal', [HomeController::class, 'loadAnimalRegister']);
 Route::get('/adocao', [HomeController::class, 'adoptAnimal']);
 Route::get('/acessar', [HomeController::class, 'loadLogin']);
 

@@ -1,6 +1,6 @@
 @extends('layoutLanding')
 @section('middleContent')
 
-<h1>Deu BOAAAAAAAAAAAAA</h1>
+<h1>Login Accept</h1>
 
 @endsection
