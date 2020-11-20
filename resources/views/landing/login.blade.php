@@ -1,6 +1,10 @@
 @extends('LayoutLanding')
 @section('middleContent')
 
+@if(Session::has('user'))
+  {{ Session::get('user')->ds_email }}
+@endif
+
 <div class="container container-login">
   <div class="row row-login justify-content-center">
     <div class="col-12 col-md-4 col-login">

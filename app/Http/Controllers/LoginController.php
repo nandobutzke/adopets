@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\user;
+use App\Models\animals;
+use APP\Http\Middleware\CheckLogin;
 
 
 class LoginController extends Controller
@@ -14,9 +16,14 @@ class LoginController extends Controller
         $user = user::where('ds_email', $req['ds_email'])->first();
 
         if ($user['ds_password'] == $req['ds_password']) {
-            return view('landing/loginAccept');
-        } else {
-            return redirect('/acessar');
+            $req->session()->put('user', $user);
+            return redirect('/adocao');
         }
+            return redirect('/acessar');
+    }
+
+    public function logout(Request $req) {
+        $req->session()->flush();
+        return redirect('/acessar');
     }
 }
