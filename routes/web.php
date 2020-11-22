@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AnimalController;
 use App\Http\Middleware\CheckLogin;
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Middleware\CheckLogin;
 
 //Register User & Animal
 Route::post('cadastrarUsuario', [HomeController::class, 'userRegister']);
-Route::post('cadastrarAnimal', [HomeController::class, 'animalRegister']);
+
 
 
 //Get animal locations
@@ -26,8 +27,9 @@ Route::get('/cadastro-usuario', [HomeController::class, 'loadUserRegister']);
 Route::get('/acessar', [HomeController::class, 'loadLogin']);
 
 Route::middleware([CheckLogin::class])->group(function() { 
-  Route::get('/adocao', [HomeController::class, 'adoptAnimal']);
-  Route::get('/cadastro-animal', [HomeController::class, 'loadAnimalRegister']);
+  Route::get('/adocao', [AnimalController::class, 'adoptAnimal']);
+  Route::get('/cadastro-animal', [AnimalController::class, 'loadAnimalRegister']);
+  Route::post('/animalRegister', [AnimalController::class, 'animalRegister']);
 }); 
 
 Route::get('/logout', [LoginController::class, 'logout']);

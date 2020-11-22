@@ -20,7 +20,7 @@
 
       <h1 class="animal-register-title">Cadastrar Animal</h1>
       <p>Basta preencher esse formulário com algumas informações do animal que deseja doar para apresentá-lo na <a class="animal-list-link" href="/adocao"><strong>lista de adoção!</strong></a></p>
-      <form method="post" action="cadastrarAnimal">
+      <form action="/animalRegister" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="input-group input-animal mt-5">
           <input type="text" name="nm_name" aria-label="Animal Name" placeholder="Nome do animal" class="form-control">
@@ -46,9 +46,9 @@
         <div class="input-group input-animal mb-3 mt-4">
           <div class="custom-file">
             <label class="file-input-label" for="photo">Escolha um arquivo</label>
-            <input type="file" name="photo" class="custom-file-input" placeholder="Escolha um arquivo" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-          </div>  
-          
+            <input type="file" required name="photo" class="custom-file-input" placeholder="Escolha um arquivo" id="photo" aria-describedby="inputGroupFileAddon01">
+          </div>
+
         </div>
 
         <button type="submit" class="btn color-theme-2 mt-4 mb-4 text-left">Postar</button>

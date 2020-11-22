@@ -25,6 +25,15 @@ body {
   color: white;
 }
 
+#main-content .slogan-text {
+  color: #ffbcbc;
+}
+
+#main-content .text-description-home {
+  color: #fc6969;
+  font-size: 1.6rem;
+}
+
 .menu .menu-item .menu-link {
   color: #FF9191 !important;
 }
@@ -172,10 +181,6 @@ body {
 .animal-list-link:hover {
   color: #fd4343;
   text-decoration: none;
-}
-
-.input-group {
-
 }
 
 .input-group label {

@@ -13,7 +13,7 @@ class Animals extends Migration
      */
     public function up()
     {
-        Schema::create('animals', function (Blueprint $table) {
+        /* Schema::create('animals', function (Blueprint $table) {
             $table->bigIncrements('id_animal');
             $table->integer('nr_age');
             $table->string('nm_name');
@@ -25,7 +25,11 @@ class Animals extends Migration
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id_user')->on('user');
             $table->timestamps();
-        });
+        }); */
+
+        Schema::table('animals', function(Blueprint $table) {
+            $table->string('img_animal')->after('dt_born');
+        }); 
     }
 
     /**

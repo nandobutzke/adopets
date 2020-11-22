@@ -20,14 +20,7 @@ class HomeController extends Controller
         return $user;
     }
 
-    public function animalRegister(Request $req) {
-        $animal = new animals();
-        $req['id_user'] = 1;
-        $animal->fill($req->all());
-        $animal->save();
-
-        return redirect('/adocao');     //Return a JSON with animal informations
-    }
+    
 
     //loadPages
 
@@ -40,16 +33,6 @@ class HomeController extends Controller
     public function loadUserRegister(Request $req) {
         $user = user::get();
         return view('landing/userRegister', compact('user'));
-    }
-
-    public function loadAnimalRegister(Request $req) {
-        $animals = animals::get();
-        return view('landing/animalRegister', compact('animals'));
-    }
-
-    public function adoptAnimal() {
-        $animal = animals::get();
-        return view('landing/adoption', compact('animal'));
     }
 
     public function loadLogin() {

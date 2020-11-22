@@ -4,8 +4,12 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6">
-      <div class="logo-img text-center mt-5 p-3">
-        <img height="80px" src="/img/donapets-title.png" alt="">
+      <div class="logo-img mt-5 p-3">
+        <div class="mb-2">
+          <img class="justify-content-center" height="80px" src="/img/donapets-title.png" alt="">
+        </div>
+        <h4 class="slogan-text" data-animation="fadeInLeft" data-delay=".6s">O PORTAL DE ADOÇÃO ONLINE</h4>
+        <p class="text-description-home mt-5">Se você tem um animal para adoção, ou deseja encontrar o companheiro perfeito, está no lugar certo!</p>
       </div>
     </div>
     <div class="col-12 col-md-6">
