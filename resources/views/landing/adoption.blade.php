@@ -5,13 +5,13 @@
 <div id="animal-list" class="container">
   <div class="row">
     @foreach($animal as $animals)
-    <div class="col-md-4">
+    <div class="col-md-4 mt-5">
       <div class="card card-animal" style="width: 18rem;">
         <a class="card-animal-link zoom" data-toggle="modal" data-target="#{{ $animals['nm_name'] }}">
           <div class="card-animal-hover">
             <div class="card-animal-hover-content"><i class="fas fa-plus fa-3x"></i></div>
           </div>
-            <img src="/app/storage/animal/{{ $animals['img_animal'] }}" class="card-img-top card-animal-img" alt="...">
+            <img src="/animalImage/{{ $animals['img_animal'] }}" class="card-img-top card-animal-img" alt="...">
         </a>
       </div>
     </div>
