@@ -23,6 +23,11 @@ class AnimalController extends Controller
         abort(404);
     }
 
+    public function loadAnimal(Request $req) {
+        $animal = animals::where('id_animal', $req->id)->first();  
+        return view('popup/animals', compact('animal'));
+    }
+
     public function animalRegister(Request $req)
     {
         $animal = new animals();

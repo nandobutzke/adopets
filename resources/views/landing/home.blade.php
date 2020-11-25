@@ -21,8 +21,8 @@
   <div class="row">
     <div class="col-12 col-md-6">
       <div class="buttons-home mt-5 mb-5">
-        <button type="button" class="btn btn-danger mr-2 pt-3 pb-3 pr-5 pl-5">Adotar</button>
-        <button type="button" class="btn btn-light ml-2 pt-3 pb-3 pr-5 pl-5 color-theme-1">Doar</button>
+        <a type="button" href="/adocao" class="btn btn-danger mr-2 pt-3 pb-3 pr-5 pl-5">Adotar</a>
+        <a type="button" href="/cadastro-animal" class="btn btn-light ml-2 pt-3 pb-3 pr-5 pl-5 color-theme-1">Doar</a>
       </div>
     </div>
   </div>

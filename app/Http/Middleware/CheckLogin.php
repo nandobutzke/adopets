@@ -22,7 +22,7 @@ class CheckLogin
             return $next($req);
         }
 
-        return redirect('/');
+        return redirect('/acessar');
         
         
         

@@ -29,6 +29,7 @@ Route::get('/acessar', [HomeController::class, 'loadLogin']);
 Route::middleware([CheckLogin::class])->group(function() { 
   Route::get('/adocao', [AnimalController::class, 'adoptAnimal']);
   Route::get('/cadastro-animal', [AnimalController::class, 'loadAnimalRegister']);
+  Route::get('/animal/{id}', [AnimalController::class, 'loadAnimal']);
   Route::post('/animalRegister', [AnimalController::class, 'animalRegister']);
 }); 
 

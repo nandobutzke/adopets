@@ -13,23 +13,20 @@ class Animals extends Migration
      */
     public function up()
     {
-        /* Schema::create('animals', function (Blueprint $table) {
+        Schema::create('animals', function (Blueprint $table) {
             $table->bigIncrements('id_animal');
             $table->integer('nr_age');
             $table->string('nm_name');
             $table->string('ds_genre');   
             $table->string('ds_species');
             $table->string('ds_breed');
+            $table->string('img_animal');
             $table->string('ds_bio');
             $table->dateTime('dt_born');
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id_user')->on('user');
             $table->timestamps();
-        }); */
-
-        Schema::table('animals', function(Blueprint $table) {
-            $table->string('img_animal')->after('dt_born');
-        }); 
+        });
     }
 
     /**

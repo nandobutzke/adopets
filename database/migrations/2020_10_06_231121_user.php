@@ -19,7 +19,7 @@ class User extends Migration
             $table->string('ds_public_place');   //logradouro
             $table->string('ds_complement');
             $table->string('nm_neighborhood');
-            $table->integer('nr_cep');
+            $table->string('nr_cep');
             $table->string('nr_phone');
             $table->string('ds_email', 60)->unique();
             $table->string('ds_password');
@@ -27,6 +27,10 @@ class User extends Migration
             $table->dateTime('dt_birth');
             $table->timestamps();
         });
+
+        /* Schema::table('user', function(Blueprint $table) {
+            $table->string('nr_cep');
+        }); */
     }
 
     /**
