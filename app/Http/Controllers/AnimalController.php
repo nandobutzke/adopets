@@ -37,7 +37,7 @@ class AnimalController extends Controller
     {
         $animal = new animals();
         $req['id_user'] = 1;
-        animals::join('user', 'animals.id_user', 'user.id_user')->get();
+        
         
 
         if ($req->file('photo')) {
@@ -47,6 +47,7 @@ class AnimalController extends Controller
 
 
         $animal->fill($req->all());
+        $animal['id_user'] = $req->session()->get('user')->id_user;
 
         if ($animal->save()) {
             return redirect('/adocao')->with('success', 'Animal cadastrado com sucesso!');

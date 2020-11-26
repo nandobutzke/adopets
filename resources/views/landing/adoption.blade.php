@@ -11,7 +11,7 @@
           <div class="card-animal-hover">
             <div class="card-animal-hover-content"><i class="fas fa-plus fa-3x"></i></div>
           </div>
-            <img src="/img/dexter.png" class="card-img-top card-animal-img" alt="...">
+            <img src="/animal/{{ $animals['id_animal'] }}" class="card-img-top card-animal-img" alt="...">
         </a>
       </div>
     </div>

@@ -29,7 +29,7 @@ Route::get('/cadastro-usuario', [HomeController::class, 'loadUserRegister']);
 Route::middleware([CheckLogin::class])->group(function() { 
   Route::get('/adocao', [AnimalController::class, 'adoptAnimal']);
   Route::get('/cadastro-animal', [AnimalController::class, 'loadAnimalRegister']);
-  Route::get('/animal/{id}', [AnimalController::class, 'loadAnimal']);
+  Route::get('/animal/{id}', [AnimalController::class, 'animalImage']);
   Route::post('/animalRegister', [AnimalController::class, 'animalRegister']);
   Route::post('/logout', [LoginController::class, 'logout']);
 });
@@ -38,10 +38,11 @@ Route::middleware([CheckLogout::class])->group(function() {
   Route::get('/acessar', [HomeController::class, 'loadLogin']);
 });
 
+
 Route::get('/logout', [LoginController::class, 'logout']);
 
 
 //Results Routes
-Route::get('/animal/{id}', [HomeController::class, 'consultarAnimal']);
+/* Route::get('/animal/{id}', [HomeController::class, 'consultarAnimal']); */
 Route::post('/login', [LoginController::class, 'autenticarLogin']);
 

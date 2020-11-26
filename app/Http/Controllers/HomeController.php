@@ -18,7 +18,7 @@ class HomeController extends Controller
         $user->fill($req->all());
         $user->save();
 
-        return $user;
+        return redirect('/adocao');
     }
 
     
