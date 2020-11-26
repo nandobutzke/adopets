@@ -14,7 +14,7 @@ class HomeController extends Controller
     public function userRegister(Request $req) {
         
         $user = new user();
-        $password = Hash::make($req['ds_password']);
+        $req['ds_password'] = Hash::make($req['ds_password']);
         $user->fill($req->all());
         $user->save();
 
