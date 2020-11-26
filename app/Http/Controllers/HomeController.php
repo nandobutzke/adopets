@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\user;
 use App\Models\animals;
-
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -14,6 +14,7 @@ class HomeController extends Controller
     public function userRegister(Request $req) {
         
         $user = new user();
+        $password = Hash::make($req['ds_password']);
         $user->fill($req->all());
         $user->save();
 

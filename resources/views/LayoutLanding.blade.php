@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,9 @@
   <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body id="main-content">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mr-5 ml-5">
     <a class="navbar-brand" href="/"><img src="/img/back.svg" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -28,10 +30,32 @@
         <li class="nav-item menu-item">
           <a class="nav-link menu-link" href="#">Quem sou?</a>
         </li>
+        @if(Session::has('user'))
+        <li class="nav-item menu-item">
+          <p class="nav-link menu-link">|</p>
+        </li>
+        <li class="nav-item dropdown menu-item">
+          <a class="nav-link dropdown-toggle menu-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ Session::get('user')->nm_user }}
+          </a>
+          <div class="dropdown-menu dropdown-menu-profile" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item dropdown-item-profile" href="#">Meu perfil</a>
+            <div class="dropdown-divider dropdown-divider-profile"></div>
+            <a class="dropdown-item dropdown-item-profile" href="/logout">Sair</a>
+          </div>
+        </li>
+        @else
+        <li class="nav-item menu-item">
+          <p class="nav-link menu-link">|</p>
+        </li>
+        <li class="nav-item menu-item">
+          <a class="nav-link menu-link" href="/acessar">Acessar</a>
+        </li>
+        @endif
       </ul>
     </div>
   </nav>
-  
+
   @yield('middleContent')
 
   <footer height="80px">

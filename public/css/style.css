@@ -255,3 +255,18 @@ body {
 .container-login .row-login .col-login form .btn-login:hover {
   background-color: #fd5a5a;
 }
+
+.navbar-nav .dropdown-menu-profile {
+  float: left !important;
+  padding-right: 0.5rem 0.7rem !important;
+  border: 1px solid #fc6969 !important;
+}
+
+.dropdown-item-profile {
+  width: 50% !important;
+  color: #fc6969 !important;
+}
+
+.dropdown-divider-profile {
+  border-top: 1px solid #ffbcbc !important;
+}

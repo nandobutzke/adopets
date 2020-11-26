@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AnimalController;
 use App\Http\Middleware\CheckLogin;
+use App\Http\Middleware\CheckLogout;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,14 +25,18 @@ Route::post('cadastrarUsuario', [HomeController::class, 'userRegister']);
 //Get animal locations
 Route::get('/', [HomeController::class, 'loadHome']);
 Route::get('/cadastro-usuario', [HomeController::class, 'loadUserRegister']);
-Route::get('/acessar', [HomeController::class, 'loadLogin']);
 
 Route::middleware([CheckLogin::class])->group(function() { 
   Route::get('/adocao', [AnimalController::class, 'adoptAnimal']);
   Route::get('/cadastro-animal', [AnimalController::class, 'loadAnimalRegister']);
   Route::get('/animal/{id}', [AnimalController::class, 'loadAnimal']);
   Route::post('/animalRegister', [AnimalController::class, 'animalRegister']);
-}); 
+  Route::post('/logout', [LoginController::class, 'logout']);
+});
+
+Route::middleware([CheckLogout::class])->group(function() {
+  Route::get('/acessar', [HomeController::class, 'loadLogin']);
+});
 
 Route::get('/logout', [LoginController::class, 'logout']);
 

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\user;
 use App\Models\animals;
 use APP\Http\Middleware\CheckLogin;
-
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -15,7 +15,7 @@ class LoginController extends Controller
     {   
         $user = user::where('ds_email', $req['ds_email'])->first();
 
-        if ($user['ds_password'] == $req['ds_password']) {
+        if (Hash::check($req['ds_password'], $user['ds_password'])) {
             $req->session()->put('user', $user);
             return redirect('/adocao');
         }
