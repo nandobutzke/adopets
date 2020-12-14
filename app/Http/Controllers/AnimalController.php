@@ -14,14 +14,21 @@ class AnimalController extends Controller
         return view('landing/animalRegister', compact('animals'));
     }
     
-    public function loadAnimal(Request $req) {
-        $animal = animals::where('id_animal', $req->id)->first();  
-        return view('popup/animals', compact('animal'));
+    public function loadAnimal($id) {
+        $animals = animals::find($id);  
+        return view('popup/animals', compact('animals'));
+    }
+
+    public function animalPopUp($id) {
+        $animals = animals::find($id);
+        if(isset($animals['id_animal']) && !is_null($animals['id_animal'])) {
+
+        }
     }
 
     public function adoptAnimal() {
-        $animal = animals::all();
-        return view('landing/adoption', compact('animal'));
+        $animals = animals::all();
+        return view('landing/adoption', compact('animals'));
     }
 
     //CRUD
@@ -35,21 +42,18 @@ class AnimalController extends Controller
 
     public function animalRegister(Request $req)
     {
-        $animal = new animals();
+        $animals = new animals();
         $req['id_user'] = 1;
-        
-        
 
         if ($req->file('photo')) {
             $path = $req->file('photo')->store('animal');
-            $animal['img_animal'] = $path;
+            $animals['img_animal'] = $path;
         }
 
+        $animals->fill($req->all());
+        $animals['id_user'] = $req->session()->get('user')->id_user;
 
-        $animal->fill($req->all());
-        $animal['id_user'] = $req->session()->get('user')->id_user;
-
-        if ($animal->save()) {
+        if ($animals->save()) {
             return redirect('/adocao')->with('success', 'Animal cadastrado com sucesso!');
         } else {
             return redirect('/cadastro-animal')->with('error', 'Não foi possível efetuar o cadastro do animal');

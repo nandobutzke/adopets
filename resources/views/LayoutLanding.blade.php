@@ -39,7 +39,7 @@
             {{ Session::get('user')->nm_user }}
           </a>
           <div class="dropdown-menu dropdown-menu-profile" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item dropdown-item-profile" href="#">Meu perfil</a>
+            <a class="dropdown-item dropdown-item-profile" href="/perfil">Meu perfil</a>
             <div class="dropdown-divider dropdown-divider-profile"></div>
             <a class="dropdown-item dropdown-item-profile" href="/logout">Sair</a>
           </div>

@@ -20,16 +20,17 @@ use App\Http\Middleware\CheckLogout;
 //Register User & Animal
 Route::post('cadastrarUsuario', [HomeController::class, 'userRegister']);
 
-
-
 //Get animal locations
 Route::get('/', [HomeController::class, 'loadHome']);
 Route::get('/cadastro-usuario', [HomeController::class, 'loadUserRegister']);
 
+
 Route::middleware([CheckLogin::class])->group(function() { 
   Route::get('/adocao', [AnimalController::class, 'adoptAnimal']);
   Route::get('/cadastro-animal', [AnimalController::class, 'loadAnimalRegister']);
-  Route::get('/animal/{id}', [AnimalController::class, 'animalImage']);
+  Route::get('/perfil', [HomeController::class, 'loadProfile']);
+  Route::get('/animalPopup/{id}', [AnimalController::class, 'loadAnimal']);
+  Route::get('/animalImage/{id}', [AnimalController::class, 'animalImage']);
   Route::post('/animalRegister', [AnimalController::class, 'animalRegister']);
   Route::post('/logout', [LoginController::class, 'logout']);
 });

@@ -21,6 +21,12 @@ class HomeController extends Controller
         return redirect('/adocao');
     }
 
+
+    public function loadProfile(Request $req) {
+        $users = user::get();
+        $animals = animals::get();
+        return view('landing/profile', compact('users', 'animals'));
+    } 
     
 
     //loadPages

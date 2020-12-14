@@ -270,3 +270,27 @@ body {
 .dropdown-divider-profile {
   border-top: 1px solid #ffbcbc !important;
 }
+
+.profile-container {
+  height: 500px;
+  border: 1px solid #ccc !important;
+  border-radius: 25px
+}
+
+.location-container {
+  height: 500px;
+  border: 1px solid #ccc !important;
+  border-radius: 25px
+}
+
+.info-container {
+  height: 500px;
+  border: 1px solid #ccc !important;
+  border-radius: 25px
+}
+
+.input-profile-text {
+  color: white !important;
+  background: #ffbcbc !important;
+}
+
