@@ -14,8 +14,11 @@
 </head>
 
 <body id="main-content">
-  <nav class="navbar navbar-expand-lg navbar-light mr-5 ml-5">
-    <a class="navbar-brand" href="/"><img src="/img/back.svg" alt=""></a>
+  <nav class="navbar navbar-expand-lg navbar-light mr-5 ml-5 align-items-center">
+    <a class="navbar-brand" href="/">
+      <!-- <img src="/img/back.svg" alt=""> -->
+      <img class="justify-content-center" height="20px" src="/img/donapets-title.png" alt="Logo">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

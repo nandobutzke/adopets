@@ -14,6 +14,7 @@
           <input type="text" name="ds_complement" placeholder="Complemento"><br>
           <input type="text" name="nm_neighborhood" placeholder="Bairro"><br>
           <input type="text" name="nr_cep" placeholder="CEP"><br>
+          <input type="text" name="ds_state" placeholder="Estado"><br>
           <input type="text" name="nr_phone" placeholder="Número de telefone"><br>
           <input type="text" name="ds_bio" placeholder="Bio"><br>
           <input type="date" name="dt_birth" placeholder="Data de nascimento"><br>

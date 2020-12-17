@@ -28,9 +28,9 @@ class User extends Migration
             $table->timestamps();
         });
 
-        /* Schema::table('user', function(Blueprint $table) {
-            $table->string('nr_cep');
-        }); */
+        Schema::table('user', function(Blueprint $table) {
+            $table->string('ds_state')->after('nr_cep')->nullable();
+        });
     }
 
     /**

@@ -6,10 +6,10 @@
     <div class="col-12 col-md-6">
       <div class="logo-img mt-5 p-3">
         <div class="mb-2">
-          <img class="justify-content-center" height="80px" src="/img/donapets-title.png111" alt="Logo">
+          <img class="justify-content-center" height="80px" src="/img/donapets-title.png" alt="Logo">
         </div>
         <h4 class="slogan-text" data-animation="fadeInLeft" data-delay=".6s">PORTAL DE ADOÇÃO DE ANIMAIS ONLINE</h4>
-        <!-- <p class="text-description-home mt-5">Se você tem um animal para adoção, ou deseja encontrar o companheiro perfeito, está no lugar certo!</p> -->
+        <p class="text-description-home mt-5">Se você tem um animal para adoção, ou deseja encontrar o companheiro perfeito, está no lugar certo!</p>
       </div>
     </div>
     <div class="col-12 col-md-6">

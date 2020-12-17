@@ -40,10 +40,11 @@ Route::middleware([CheckLogout::class])->group(function() {
 });
 
 
-Route::get('/logout', [LoginController::class, 'logout']);
 
 
 //Results Routes
 /* Route::get('/animal/{id}', [HomeController::class, 'consultarAnimal']); */
+/*Autentificação*/
 Route::post('/login', [LoginController::class, 'autenticarLogin']);
+Route::get('/logout', [LoginController::class, 'logout']);
 
