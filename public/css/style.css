@@ -10,6 +10,11 @@ body {
   color: white;
 }
 
+#container-user-register {
+  background: url(../img/background/user-register-background.png) !important;
+  background-repeat: no-repeat;
+}
+
 #main-content .color-theme-1:hover {
   background-color: #fc6969 !important;
   color: white;
@@ -167,7 +172,7 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-.animal-register-title {
+.register-title {
   font-family: 'Fredoka One';
   color: #fc6969;
   font-size: 4rem;

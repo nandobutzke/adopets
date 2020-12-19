@@ -50,7 +50,7 @@
 <div class="container mt-5 animals-container p-3">
     <div class="row">
         <div class="col-12 col-md-3">
-            <img height="200px" width="200px" src="animalImage/{{ $animals['id_animal'] = 6 }}" alt="Animal">
+            <img height="200px" width="200px" src="animalImage/{{ $animals['id_animal'] }}" alt="Animal">
         </div>
         <div class="col-12 col-md-4">
             
