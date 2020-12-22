@@ -1,13 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-body {
+/* body {
   height: 100%;
   width: 100%;
 }
-
+ */
 #main-content .color-theme-1 {
   background-color: #FF9191 !important;
   color: white;
+}
+
+#main-content {
+  height: 100vh;
+}
+
+#main-content .navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("../img/toggler-icon.svg") !important;
+}
+
+
+
+#main-content .navbar .navbar-toggler  {
+  padding: .50rem .50rem;
+  border-color: #FF9191;
 }
 
 #container-user-register {
@@ -299,3 +314,24 @@ body {
   background: #ffbcbc !important;
 }
 
+@media (max-width: 992px) {
+   .menu .menu-item .menu-item-p p {
+    display: none !important;
+   }
+    #main-content .slogan-title {
+      font-size: 1.9rem;
+    }
+  
+}
+
+@media(max-width: 769px) {
+  #main-content .slogan-title {
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 550px) {
+  #main-content .slogan-title {
+    font-size: 1.9rem;
+  }
+}

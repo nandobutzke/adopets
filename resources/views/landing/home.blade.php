@@ -1,14 +1,14 @@
 @extends('LayoutLanding')
 @section('middleContent')
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-12 col-md-6">
-      <div class="logo-img mt-5 p-3">
-        <div class="mb-2">
+      <div class="logo-img mt-5 p-3 ">
+        <div class="mb-2 d-lg-block d-none">
           <img class="justify-content-center" height="80px" src="/img/donapets-title.png" alt="Logo">
         </div>
-        <h4 class="slogan-text" data-animation="fadeInLeft" data-delay=".6s">PORTAL DE ADOÇÃO DE ANIMAIS ONLINE</h4>
+        <h4 class="slogan-text slogan-title" data-animation="fadeInLeft" data-delay=".6s">PORTAL DE ADOÇÃO DE ANIMAIS ONLINE</h4>
         <p class="text-description-home mt-5">Se você tem um animal para adoção, ou deseja encontrar o companheiro perfeito, está no lugar certo!</p>
       </div>
     </div>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="col-12 col-md-6">
-      <div class="mt-5">
+      <div class="mt-5 text-right">
         <span class="slogan-text">N Animais já encontraram um lar!</span>
       </div>
     </div>

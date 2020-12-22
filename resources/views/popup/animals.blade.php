@@ -5,7 +5,8 @@
 <div class="modal" id="{{ $animal['nm_name'] }}">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header justify-content-center">
+        <img height="150px" src="animalImage/{{ $animal['id_animal'] }}" alt="Img_animal">
         <h5 class="modal-title" id="exampleModalLabel">{{ $animal['nm_name'] }}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
