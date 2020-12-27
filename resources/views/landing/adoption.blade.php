@@ -21,23 +21,18 @@
 <!-- loadAnimal -->
 
 
+@include('popup.animals')
+
 <script>
   function showAnimal(id_animal) {
-    $('#' + id_animal).html('<img class="justify-content-center text-center" src="img/loading.gif" alt="">');
-    $.get('/animalPopUp/' + id_animal, function(data) {
+    /* $('#' + id_animal).html('<img class="justify-content-center text-center" src="img/loading.gif" alt="">'); */
+    $.get('/animalPopup/' + id_animal, function(data) {
       $('#' + id_animal ).html(data)
       
     });
   }
 </script>
 
-
-
-
-
-
-
-<!-- @include('popup.animals') -->
 
 
 @endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\animals;
+use DateTime;
 use Illuminate\Http\Request;
 
 class AnimalController extends Controller
@@ -15,20 +16,23 @@ class AnimalController extends Controller
     }
     
     public function loadAnimal($id) {
+        $date = date("d/m/Y"); 
         $animals = animals::find($id);  
-        return view('popup/animals', compact('animals'));
+        
+        $animalTimeCreated = animals::where('created_at', "$date%")->get();
+
+
+        return view('popup/animals', compact('animals', 'animalTimeCreated'));
     }
 
-    public function animalPopUp($id) {
-        $animals = animals::find($id);
-        if(isset($animals['id_animal']) && !is_null($animals['id_animal'])) {
-
-        }
-    }
 
     public function adoptAnimal() {
+        $date = date("Y-m-d H:00");
         $animals = animals::all();
-        return view('landing/adoption', compact('animals'));
+
+        $animalTimeCreated = animals::where('created_at', "$date%")->get();
+
+        return view('landing/adoption', compact('animals', 'animalTimeCreated'));
     }
 
     //CRUD

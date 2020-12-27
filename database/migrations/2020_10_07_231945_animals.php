@@ -22,7 +22,7 @@ class Animals extends Migration
             $table->string('ds_breed');
             $table->string('img_animal');
             $table->string('ds_bio');
-            $table->dateTime('dt_born');
+            $table->date('dt_born');
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id_user')->on('user');
             $table->timestamps();

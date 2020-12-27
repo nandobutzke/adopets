@@ -67,22 +67,6 @@
   text-align: left !important;
 }
 
-@media(max-width: 1200px) {
-  .logon-img {
-    text-align: center !important;
-  }
-
-  .logo-img img {
-    width: 95%;
-    height: 95%;
-  }
-
-  .buttons-home {
-    text-align: center !important;
-  }
-}
-
-
 .placeholder-input {
   background-color: #fc6969 !important;
 }
@@ -312,6 +296,50 @@
 .input-profile-text {
   color: white !important;
   background: #ffbcbc !important;
+}
+
+.animal-content-adoption h5 {
+  font-size: 36px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fc6969;
+  text-align: center;
+}
+
+
+.img-animal-container {
+  border: 2px solid #fc6969;
+  border-radius: 5px;
+}
+
+.img-animal-container img {
+  border-radius: 5px;
+}
+
+.animal-details-list {
+  list-style: none;
+}
+
+.animal-details-list .animal-details-item {
+  
+}
+
+.animal-details-list .animal-details-item strong {
+  color: #FF9191 !important;
+}
+
+@media(max-width: 1200px) {
+  .logon-img {
+    text-align: center !important;
+  }
+
+  .logo-img img {
+    width: 95%;
+    height: 95%;
+  }
+
+  .buttons-home {
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 992px) {
