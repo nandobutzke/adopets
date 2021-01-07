@@ -15,6 +15,13 @@ class HomeController extends Controller
         
         $user = new user();
         $req['ds_password'] = Hash::make($req['ds_password']);
+
+
+        if ($req->file('photo')) {
+            $path = $req->file('photo')->store('animal');
+            $user['img_user'] = $path;
+        }
+
         $user->fill($req->all());
         $user->save();
 

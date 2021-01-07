@@ -20,6 +20,7 @@ class User extends Migration
             $table->string('ds_complement');
             $table->string('nm_neighborhood');
             $table->string('nr_cep');
+            $table->string('img_user');
             $table->string('nr_phone');
             $table->string('ds_email', 60)->unique();
             $table->string('ds_password');

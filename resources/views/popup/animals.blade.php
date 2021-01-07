@@ -3,7 +3,7 @@
 
 
 @foreach($animals as $animal)
-<div class="modal" id="{{ $animal['id_animal'] }}">
+<div class="modal" id="{{ strval($animal['nm_name']) }}">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header justify-content-center">
@@ -31,7 +31,7 @@
     </div>
   </div>
 </div>
-<!-- @endforeach -->
+@endforeach
 
 
 <!-- End Modal -->

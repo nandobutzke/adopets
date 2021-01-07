@@ -41,6 +41,13 @@
         <div class="input-group input-animal mt-4">
           <input type="password" name="ds_password" placeholder="Senha" aria-label="Senha" class="form-control">
         </div>
+        <div class="input-group input-animal mb-3 mt-4">
+            <div class="custom-file">
+              <label class="file-input-label" for="photo">Escolha um arquivo</label>
+              <input type="file" required name="photo" class="custom-file-input" placeholder="Escolha um arquivo" id="photo" aria-describedby="inputGroupFileAddon01">
+            </div>
+  
+          </div>
         
         <button type="submit" class="btn color-theme-2 mt-4 mb-4 text-left">Cadastrar</button>
 

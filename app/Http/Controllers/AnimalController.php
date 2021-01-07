@@ -29,6 +29,7 @@ class AnimalController extends Controller
     public function adoptAnimal() {
         $date = date("Y-m-d H:00");
         $animals = animals::all();
+
         $animalTimeCreated = animals::where('created_at', "$date%")->get();
     
 

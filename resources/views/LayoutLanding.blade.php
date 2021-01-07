@@ -30,10 +30,10 @@
         <li class="nav-item menu-item">
           <a class="nav-link menu-link" href="#">Contato</a>
         </li>
-        <li class="nav-item menu-item">
-          <a class="nav-link menu-link" href="#">Quem sou?</a>
-        </li>
         @if(Session::has('user'))
+        <li class="nav-item menu-item">
+          <a class="nav-link menu-link" href="/cadastro-animal">Cadastrar animal</a>
+        </li>
         <li class="nav-item menu-item">
           <p class="nav-link menu-link">|</p>
         </li>
