@@ -30,10 +30,10 @@
         <li class="nav-item menu-item">
           <a class="nav-link menu-link" href="#">Contato</a>
         </li>
-        @if(Session::has('user'))
         <li class="nav-item menu-item">
-          <a class="nav-link menu-link" href="/cadastro-animal">Cadastrar animal</a>
+          <a class="nav-link menu-link" href="{{ Session::has('user') ? '/cadastro-animal' : '/cadastro-usuario' }}">{{ Session::has('user') ? 'Cadastrar animal' : 'Registre-se' }}</a>
         </li>
+        @if(Session::has('user'))
         <li class="nav-item menu-item">
           <p class="nav-link menu-link">|</p>
         </li>

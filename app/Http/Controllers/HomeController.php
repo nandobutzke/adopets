@@ -9,8 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
-    //
-
     public function userRegister(Request $req) {
         
         $user = new user();
@@ -35,6 +33,12 @@ class HomeController extends Controller
         return view('landing/profile', compact('users', 'animals'));
     } 
     
+    public function userImage($id) {
+        $users = user::find($id);
+        if (isset($users['img_user']) && !is_null($users['img_user'])) return response()->file(storage_path('app/' . $users['img_user']));
+        abort(404);
+    }
+
 
     //loadPages
 

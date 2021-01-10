@@ -31,6 +31,7 @@ Route::middleware([CheckLogin::class])->group(function() {
   Route::get('/perfil', [HomeController::class, 'loadProfile']);
   Route::get('/animalPopup/{id}', [AnimalController::class, 'loadAnimal']);
   Route::get('/animalImage/{id}', [AnimalController::class, 'animalImage']);
+  Route::get('/userImage/{id}', [HomeController::class, 'userImage']);
   Route::post('/animalRegister', [AnimalController::class, 'animalRegister']);
   Route::post('/logout', [LoginController::class, 'logout']);
 });

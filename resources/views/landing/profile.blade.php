@@ -6,7 +6,7 @@
 <div class="container mt-5 profile-container p-3">
     <div class="row">
         <div class="col-12 col-md-3">
-            <img height="200px" width="200px" src="animalImage/{{ $animals['id_animal'] = 6 }}" alt="Animal">
+            <img height="200px" width="200px" src="userImage/{{ $user['id_user'] }}" alt="Profile image">
         </div>
         <div class="col-12 col-md-4">
             <h1>Profile name</h1>

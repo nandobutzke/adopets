@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
+
+    public function alterarSenha(Request $req) {
+        
+    }
+
+
     public function autenticarLogin(Request $req)
     {   
         $user = user::where('ds_email', $req['ds_email'])->first();

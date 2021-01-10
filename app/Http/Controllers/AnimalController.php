@@ -64,6 +64,4 @@ class AnimalController extends Controller
             return redirect('/cadastro-animal')->with('error', 'Não foi possível efetuar o cadastro do animal');
         }
     }
-
-
 }
