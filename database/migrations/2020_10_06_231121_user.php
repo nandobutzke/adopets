@@ -24,6 +24,7 @@ class User extends Migration
             $table->string('nr_phone');
             $table->string('ds_email', 60)->unique();
             $table->string('ds_password');
+            $table->string('new_ds_password')->nullable();
             $table->string('ds_bio');
             $table->dateTime('dt_birth');
             $table->timestamps();

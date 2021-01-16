@@ -1,16 +1,6 @@
 @extends('LayoutLanding')
 @section('middleContent')
 
-<div class="container">
-  <div class="row">
-    <form method="GET" action="/resultados">
-      <div class="input-group input-animal mb-3">
-        <input type="text" name="nm_name" class="form-control" placeholder="Nome do animal" aria-label="Username" aria-describedby="basic-addon1">
-      </div>
-      <button type="submit" class="btn btn-danger">Primary</button>
-    </form>
-  </div>
-</div>
 
 
 <div id="animal-list" class="container">
@@ -29,19 +19,7 @@
     @endforeach
   </div>
 </div>
-<!-- loadAnimal -->
-
 
 @include('popup.animals')
 
-<!--  -->
-
-<script>
-  function showAnimal(id_animal) {
-  
-  }
-</script>
-
-
-
-@endsection
+@endsection 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\animals;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AnimalController extends Controller
 {
@@ -16,13 +17,27 @@ class AnimalController extends Controller
     }
     
     public function loadAnimal($id) {
-        $date = date("d/m/Y"); 
+        $date = date("d/m/Y");
         $animals = animals::find($id);  
         
         $animalTimeCreated = animals::where('created_at', "$date%")->get();
 
 
         return view('popup/animals', compact('animals', 'animalTimeCreated'));
+    }
+
+    public function findAnimal(Request $req) {
+
+        $animals = animals::all();
+
+        if(is_null($req->nm_name)) {
+            $animals = $animals->all();
+        } else {
+            $animals = $animals->where('nm_name', $req->nm_name);
+        }
+
+        return view('landing.results', compact('animals'));
+
     }
 
 
@@ -35,7 +50,6 @@ class AnimalController extends Controller
 
         return view('landing/adoption', compact('animals', 'animalTimeCreated'));
     }
-
     //CRUD
 
     public function animalImage($id) {
@@ -48,7 +62,8 @@ class AnimalController extends Controller
     public function animalRegister(Request $req)
     {
         $animals = new animals();
-        $req['id_user'] = 1;
+        /* $req['id_user'] = 1;
+        $animals['id_animal'] = 1; */
 
         if ($req->file('photo')) {
             $path = $req->file('photo')->store('animal');

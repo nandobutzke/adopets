@@ -26,11 +26,11 @@ class HomeController extends Controller
         return redirect('/adocao');
     }
 
-
     public function loadProfile(Request $req) {
-        $users = user::get();
+        $user = user::find($req->session()->has('user'));
+        /* $animals = animals::where('id_animal', $user['id_user']); */
         $animals = animals::get();
-        return view('landing/profile', compact('users', 'animals'));
+        return view('landing/profile', compact('user', 'animals'));
     } 
     
     public function userImage($id) {
@@ -38,8 +38,6 @@ class HomeController extends Controller
         if (isset($users['img_user']) && !is_null($users['img_user'])) return response()->file(storage_path('app/' . $users['img_user']));
         abort(404);
     }
-
-
     //loadPages
 
     public function loadHome(Request $req) {
