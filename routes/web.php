@@ -25,7 +25,7 @@ Route::get('/', [HomeController::class, 'loadHome']);
 Route::get('/cadastro-usuario', [HomeController::class, 'loadUserRegister']);
 
 
-Route::get('/resultados', [AnimalController::class, 'findAnimal']);
+
 
 Route::middleware([CheckLogin::class])->group(function() { 
   Route::get('/adocao', [AnimalController::class, 'adoptAnimal']);
@@ -37,6 +37,7 @@ Route::middleware([CheckLogin::class])->group(function() {
   Route::post('/animalRegister', [AnimalController::class, 'animalRegister']);
   Route::post('/logout', [LoginController::class, 'logout']);
   Route::post('/updateUser', [LoginController::class, 'updateUser']);
+  Route::get('/resultados', [AnimalController::class, 'findAnimal']);
 });
 
 Route::middleware([CheckLogout::class])->group(function() {
