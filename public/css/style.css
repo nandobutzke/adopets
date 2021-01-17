@@ -12,6 +12,7 @@
 
 #main-content {
   height: 100vh;
+  width: 100vw;
 }
 
 #main-content .navbar .navbar-toggler .navbar-toggler-icon {
@@ -56,15 +57,23 @@
 
 .menu .menu-item .menu-link {
   color: #FF9191 !important;
+  transition: all 0.3s;
 }
 
 .menu .menu-item .menu-link:hover {
-  transition: all 0.3s;
-  color: #fc6969 !important;
+  color: #fd3737 !important;
 }
 
 .logo-img img {
   text-align: left !important;
+}
+
+.form-donapets {
+    color: #fc6969 !important;
+}
+
+.form-donapets input[type="date" i] {
+    color: #fc6969 !important;
 }
 
 .placeholder-input {
@@ -75,16 +84,16 @@
   color: #fc6969 !important;
 }
 
-:-moz-placeholder { 
-  color: #fc6969 !important;  
+:-moz-placeholder {
+  color: #fc6969 !important;
 }
 
-::-moz-placeholder { 
-  color: #fc6969 !important;  
+::-moz-placeholder {
+  color: #fc6969 !important;
 }
 
-:-ms-input-placeholder {  
-  color: #fc6969 !important;  
+:-ms-input-placeholder {
+  color: #fc6969 !important;
 }
 
 .input-animal input {
@@ -177,6 +186,12 @@
   font-size: 4rem;
 }
 
+.profile-title {
+    font-family: 'Fredoka One';
+    color: #fc6969;
+    font-size: 4rem;
+}
+
 .animal-list-link {
   color: #FF9191;
   text-decoration: none;
@@ -234,7 +249,7 @@
 
 .container-login .row-login .col-login form {
   padding: 1.5rem;
-  
+
   border-radius: 10px;
   box-shadow: 0 0 1em #fd4343;
 }
@@ -243,7 +258,7 @@
   background-color: #ffd5d5;
 }
 
-.container-login .row-login .col-login form label { 
+.container-login .row-login .col-login form label {
   color: #FF9191;
 }
 
@@ -276,9 +291,10 @@
 }
 
 .profile-container {
-  height: 500px;
-  border: 1px solid #ccc !important;
-  border-radius: 25px
+  /* height: 500px; */
+  border: 5px groove #fd4343;
+  border-style: dotted !important;
+  border-radius: 50px
 }
 
 .location-container {
@@ -320,12 +336,24 @@
 }
 
 .animal-details-list .animal-details-item {
-  
+
 }
 
 .animal-details-list .animal-details-item strong {
   color: #FF9191 !important;
 }
+
+.copyright-link {
+    color: #FF9191;
+    transition: all 0.5s;
+}
+
+.copyright-link:hover {
+    text-decoration: none;
+    color: #fd3737;
+}
+
+
 
 @media(max-width: 1200px) {
   .logon-img {
@@ -349,13 +377,20 @@
     #main-content .slogan-title {
       font-size: 1.9rem;
     }
-  
+
 }
 
 @media(max-width: 769px) {
   #main-content .slogan-title {
     font-size: 3rem;
   }
+
+  .profile-title {
+    font-family: 'Fredoka One';
+    color: #fc6969;
+    font-size: 2rem;
+  }
+
 }
 
 @media(max-width: 550px) {
@@ -363,3 +398,5 @@
     font-size: 1.9rem;
   }
 }
+
+

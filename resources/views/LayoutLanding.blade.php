@@ -15,7 +15,7 @@
 
 <body id="main-content">
   <nav class="navbar navbar-expand-lg navbar-light mr-5 ml-5 align-items-center">
-    <a class="navbar-brand d-lg-none d-block" href="/">
+    <a class="navbar-brand" href="/">
       <!-- <img src="/img/back.svg" alt=""> -->
       <img class="justify-content-center" height="20px" src="/img/donapets-title.png" alt="Logo">
     </a>
@@ -34,7 +34,7 @@
           <a class="nav-link menu-link" href="{{ Session::has('user') ? '/cadastro-animal' : '/cadastro-usuario' }}">{{ Session::has('user') ? 'Cadastrar animal' : 'Registre-se' }}</a>
         </li>
         @if(Session::has('user'))
-        <li class="nav-item menu-item">
+        <li class="nav-item menu-item d-lg-block d-none">
           <p class="nav-link menu-link">|</p>
         </li>
         <li class="nav-item dropdown menu-item">
@@ -48,7 +48,7 @@
           </div>
         </li>
         @else
-        <li class="nav-item menu-item menu-item-p d-lg-block d-none">
+        <li class="nav-item menu-item menu-item-p d-block d-none">
           <p class="nav-link menu-link">|</p>
         </li>
         <li class="nav-item menu-item">
@@ -60,6 +60,19 @@
   </nav>
 
   @yield('middleContent')
+
+  <footer class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="footer-copyright-text justify-content-center ">
+                    <p class="text-center">Copyright &copy; <strong><a class="copyright-link" target="_blank" href="https://github.com/nandobutzke">Donapets</a></strong> 2021. Nenhum direito reservado • Desenvolvido por <strong><a class="copyright-link" target="_blank" href="https://github.com/nandobutzke">Fernando Butzke</a></strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </footer>
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

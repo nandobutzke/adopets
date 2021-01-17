@@ -15,11 +15,11 @@ class AnimalController extends Controller
         $animals = animals::get();
         return view('landing/animalRegister', compact('animals'));
     }
-    
+
     public function loadAnimal($id) {
         $date = date("d/m/Y");
-        $animals = animals::find($id);  
-        
+        $animals = animals::find($id);
+
         $animalTimeCreated = animals::where('created_at', "$date%")->get();
 
 
@@ -30,11 +30,18 @@ class AnimalController extends Controller
 
         $animals = animals::all();
 
-        if(is_null($req->nm_name)) {
-            $animals = $animals->all();
-        } else {
+        if(isset($req->nm_name)) {
             $animals = $animals->where('nm_name', $req->nm_name);
         }
+
+        if(isset($req->ds_species)) {
+            $animals = $animals->where('ds_species', $req->ds_species);
+        }
+
+        if(isset($req->ds_genre)) {
+            $animals = $animals->where('ds_genre', $req->ds_genre);
+        }
+
 
         return view('landing.results', compact('animals'));
 
@@ -46,7 +53,7 @@ class AnimalController extends Controller
         $animals = animals::all();
 
         $animalTimeCreated = animals::where('created_at', "$date%")->get();
-    
+
 
         return view('landing/adoption', compact('animals', 'animalTimeCreated'));
     }
