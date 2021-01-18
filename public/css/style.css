@@ -106,6 +106,7 @@
 
 #animal-list .card-animal {
   max-width: 25rem;
+  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
@@ -127,8 +128,6 @@
   background: black !important;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -138,10 +137,10 @@
 }
 
 #animal-list .card-animal .card-animal-link .card-animal-img {
+  height: 300px;
+  object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 #animal-list .card-animal .card-animal-link .card-animal-hover .card-animal-hover-content {
@@ -157,18 +156,16 @@
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+
 }
 
 .zoom img {
-	max-width: 100%;
+  max-width: 100%;
   transition: all 0.5s;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   border: 3px solid #FF9191;
+  border-bottom: none;
 }
 
 .zoom:hover img {
@@ -176,8 +173,22 @@
   transform: scale(1.1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+}
+
+.description-animal {
+  height: 100px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  border: 3px solid #FF9191;
+}
+
+.description-animal .description-animal-content h5 {
+    color: #fc6969;
+}
+
+.description-animal .description-animal-content p {
+    color: #FF9191;
 }
 
 .register-title {
@@ -335,12 +346,12 @@
   list-style: none;
 }
 
-.animal-details-list .animal-details-item {
-
-}
-
 .animal-details-list .animal-details-item strong {
   color: #FF9191 !important;
+}
+
+.no-results-message {
+    color: #fc6969;
 }
 
 .copyright-link {

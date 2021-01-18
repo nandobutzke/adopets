@@ -28,8 +28,7 @@ class AnimalController extends Controller
 
     public function findAnimal(Request $req) {
 
-        $animals = animals::all();
-
+        $animals = animals::get();
         if(isset($req->nm_name)) {
             $animals = $animals->where('nm_name', $req->nm_name);
         }
@@ -41,6 +40,7 @@ class AnimalController extends Controller
         if(isset($req->ds_genre)) {
             $animals = $animals->where('ds_genre', $req->ds_genre);
         }
+
 
 
         return view('landing.results', compact('animals'));
