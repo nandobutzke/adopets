@@ -28,20 +28,21 @@ class AnimalController extends Controller
 
     public function findAnimal(Request $req) {
 
-        $animals = animals::get();
-        if(isset($req->nm_name)) {
+        $animals = new animals();
+
+        if(!is_null($req->nm_name)) {
             $animals = $animals->where('nm_name', $req->nm_name);
         }
 
-        if(isset($req->ds_species)) {
+        if(!is_null($req->ds_species)) {
             $animals = $animals->where('ds_species', $req->ds_species);
         }
 
-        if(isset($req->ds_genre)) {
+        if(!is_null($req->ds_genre)) {
             $animals = $animals->where('ds_genre', $req->ds_genre);
         }
 
-
+        $animals = $animals->get();
 
         return view('landing.results', compact('animals'));
 
