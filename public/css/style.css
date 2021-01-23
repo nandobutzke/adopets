@@ -12,7 +12,7 @@
 
 #main-content {
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 #main-content .navbar .navbar-toggler .navbar-toggler-icon {
@@ -29,6 +29,7 @@
 #container-user-register {
   background: url(../img/background/user-register-background.png) !important;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 #main-content .color-theme-1:hover {
@@ -72,9 +73,11 @@
     color: #fc6969 !important;
 }
 
-.form-donapets input[type="date" i] {
-    color: #fc6969 !important;
+.input-animal input[type="date" i] {
+    border-color: #fc6969 !important;
 }
+
+
 
 .placeholder-input {
   background-color: #fc6969 !important;
@@ -98,6 +101,7 @@
 
 .input-animal input {
   border: 1px solid #FF9191 !important;
+  color: #fc6969;
 }
 
 .input-animal textarea {
@@ -218,7 +222,7 @@
 }
 
 .input-group input {
-  width: 100%;
+  width: 100% !important;
 }
 
 #file-upload-button {
@@ -364,8 +368,6 @@
     color: #fd3737;
 }
 
-
-
 @media(max-width: 1200px) {
   .logon-img {
     text-align: center !important;
@@ -407,6 +409,11 @@
 @media(max-width: 550px) {
   #main-content .slogan-title {
     font-size: 1.9rem;
+  }
+
+  .file-input-label {
+    position: absolute;
+    width: 160px !important;
   }
 }
 

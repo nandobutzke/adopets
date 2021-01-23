@@ -15,8 +15,18 @@
                     </div>
                     <img src="/animalImage/{{ $animals[$i]['id_animal'] }}" class="card-img-top card-animal-img" alt="...">
                 </a>
+                <a data-toggle="modal" data-target="#{{ $animals[$i]['nm_name'] }}">
+                    <div class="description-animal">
+                        <div class="description-animal-content">
+                            <div class="p-3">
+                                <h5>{{ $animals[$i]['nm_name'] }}</h5>
+                                <p>{{ $animals[$i]['ds_genre'] }} - {{ $animals[$i]['nr_age'] }} anos</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-    </div>
+        </div>
     @endfor
     @if($animals == null)
     <div class="col-12 justify-content-center">

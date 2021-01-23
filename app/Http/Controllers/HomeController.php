@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 class HomeController extends Controller
 {
     public function userRegister(Request $req) {
-        
+
         $user = new user();
         $req['ds_password'] = Hash::make($req['ds_password']);
 
@@ -31,11 +31,11 @@ class HomeController extends Controller
         /* $animals = animals::where('id_animal', $user['id_user']); */
         $animals = animals::get();
         return view('landing/profile', compact('user', 'animals'));
-    } 
-    
+    }
+
     public function userImage($id) {
         $users = user::find($id);
-        if (isset($users['img_user']) && !is_null($users['img_user'])) return response()->file(storage_path('app/' . $users['img_user']));
+        if (isset($users['img_user']) && !is_null($users['img_user'])) return response()->file(storage_path('app/' . 'animals/' . $users['img_user']));
         abort(404);
     }
     //loadPages

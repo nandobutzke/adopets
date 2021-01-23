@@ -75,7 +75,7 @@
                         <input type="password" name="ds_password" placeholder="Senha" aria-label="Senha" class="form-control form-donapets">
                     </div>
                 </div>
-                <div class="col-1 col-md-6">
+                <div class="col-12 col-md-6">
                     <div class="input-group input-animal mt-4">
                         <input type="password" name="new_ds_password" placeholder="Nova senha" aria-label="Senha" class="form-control form-donapets">
                     </div>
