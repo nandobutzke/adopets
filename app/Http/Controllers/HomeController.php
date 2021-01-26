@@ -25,6 +25,13 @@ class HomeController extends Controller
         return redirect('/adocao');
     }
 
+    public function loadEditAnimal(Request $req, $id) {
+        $user = user::find($req->session()->has('user'));
+        $animal = animals::find($id);
+        //return $animal;
+        return view('admin/editAnimal', compact('user', 'animal'));
+    }
+
     public function loadProfile(Request $req) {
         $user = user::find($req->session()->has('user'));
         /* $animals = animals::where('id_animal', $user['id_user']); */

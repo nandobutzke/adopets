@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\animals;
+use App\Models\user;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,6 +20,7 @@ class AnimalController extends Controller
     public function loadAnimal($id) {
         $date = date("d/m/Y");
         $animals = animals::find($id);
+        $user = user::where('id_user', $animals['id_user']);
 
         $animalTimeCreated = animals::where('created_at', "$date%")->get();
 
@@ -66,11 +68,28 @@ class AnimalController extends Controller
         abort(404);
     }
 
+    public function updateAnimal(Request $req) {
+        $animal = animals::find($req['id_animal']);
+
+        $animal['nm_name'] = $req['nm_name'];
+        $animal['nr_age'] = $req['nr_age'];
+        $animal['ds_genre'] = $req['ds_genre'];
+        $animal['ds_species'] = $req['ds_species'];
+        $animal['ds_breed'] = $req['ds_breed'];
+        $animal['ds_bio'] = $req['ds_bio'];
+        $animal['dt_born'] = $req['dt_born'];
+        $animal['img_animal'] = $req['img_animal'];
+
+        $animal->save();
+
+        return redirect('/perfil')->with('success', 'As informações foram salvas com sucesso');
+    }
+
 
     public function animalRegister(Request $req)
     {
         $animals = new animals();
-        /* $req['id_user'] = 1;
+        /* $req['id_animal'] = 1;
         $animals['id_animal'] = 1; */
 
         if ($req->file('photo')) {
@@ -79,7 +98,7 @@ class AnimalController extends Controller
         }
 
         $animals->fill($req->all());
-        $animals['id_user'] = $req->session()->get('user')->id_user;
+        $animals['id_animal'] = $req->session()->get('animal')->id_animal;
 
         if ($animals->save()) {
             return redirect('/adocao')->with('success', 'Animal cadastrado com sucesso!');

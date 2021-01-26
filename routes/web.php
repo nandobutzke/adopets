@@ -27,7 +27,7 @@ Route::get('/cadastro-usuario', [HomeController::class, 'loadUserRegister']);
 
 
 
-Route::middleware([CheckLogin::class])->group(function() { 
+Route::middleware([CheckLogin::class])->group(function() {
   Route::get('/adocao', [AnimalController::class, 'adoptAnimal']);
   Route::get('/cadastro-animal', [AnimalController::class, 'loadAnimalRegister']);
   Route::get('/perfil', [HomeController::class, 'loadProfile']);
@@ -38,6 +38,8 @@ Route::middleware([CheckLogin::class])->group(function() {
   Route::post('/logout', [LoginController::class, 'logout']);
   Route::post('/updateUser', [LoginController::class, 'updateUser']);
   Route::get('/resultados', [AnimalController::class, 'findAnimal']);
+  Route::post('/updateAnimal', [AnimalController::class, 'updateAnimal']);
+  Route::get('/editar-animal/{id}', [HomeController::class, 'loadEditAnimal']);
 });
 
 Route::middleware([CheckLogout::class])->group(function() {

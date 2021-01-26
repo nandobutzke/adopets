@@ -5,7 +5,6 @@
   <div class="container mt-5 mb-5">
     <div class="row align-items-center">
       <div class="col-12 col-md-6 justify-content-center text-center">
-
         <h1 class="register-title">Cadastrar Animal</h1>
         <p>Basta preencher esse formulário com algumas informações do animal que deseja doar para apresentá-lo na <a class="animal-list-link" href="/adocao"><strong>lista de adoção!</strong></a></p>
         <form action="/animalRegister" method="POST" enctype="multipart/form-data">
@@ -17,13 +16,19 @@
             <input type="number" name="nr_age" aria-label="Age" placeholder="Idade" class="form-control">
           </div>
           <div class="input-group input-animal mt-4">
-            <input type="text" name="ds_species" aria-label="Species" placeholder="Espécie" class="form-control">
+            <select type="text" name="ds_species" aria-label="Species" placeholder="Espécie" class="form-control" required>
+                <option value="Gato">Gato</option>
+                <option value="Cachorro">Cachorro</option>
+            </select>
           </div>
           <div class="input-group input-animal mt-4">
-            <input type="text" name="ds_genre" aria-label="Genre" placeholder="Gênero" class="form-control">
+            <select type="text" name="ds_genre" aria-label="Genre" placeholder="Gênero" class="form-control">
+                <option value="Macho">Macho</option>
+                <option value="Fêmea">Fêmea</option>
+            </select>
           </div>
           <div class="input-group input-animal mt-4">
-            <input type="text" name="ds_breed" aria-label="First name" placeholder="Raça" class="form-control">
+            <input type="text" name="ds_breed" aria-label="Raça" placeholder="Raça" class="form-control">
           </div>
           <div class="input-group input-animal mt-4">
             <textarea style="resize: none" type="text" name="ds_bio" aria-label="First name" placeholder="Bio" class="form-control"></textarea>

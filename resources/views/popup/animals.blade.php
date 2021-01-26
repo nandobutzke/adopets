@@ -27,6 +27,9 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        @if(Session::get('user')->id_user == $animal['id_user'])
+            <a href="/editar-animal/{{ $animal['id_animal'] }}" type="button" class="btn btn-primary">Editar</a>
+        @endif
       </div>
     </div>
   </div>
