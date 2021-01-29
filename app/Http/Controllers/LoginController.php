@@ -13,7 +13,7 @@ class LoginController extends Controller
 {
 
     public function autenticarLogin(Request $req)
-    {   
+    {
         $user = user::where('ds_email', $req['ds_email'])->first();
 
         if (Hash::check($req['ds_password'], $user['ds_password'])) {
@@ -24,10 +24,8 @@ class LoginController extends Controller
     }
 
     public function updateUser(Request $req) {
-        //return $req->id_user;
-
         $user = user::find($req['id_user']);
-        
+
         $user['nm_user'] = $req['nm_user'];
         $user['ds_public_place'] = $req['ds_public_place'];
         $user['ds_complement'] = $req['ds_complement'];
@@ -49,7 +47,7 @@ class LoginController extends Controller
         $user->save();
         return redirect('/perfil')->with('success', 'As informações foram salvas com sucesso');
 
-      
+
 
     }
 

@@ -78,7 +78,15 @@ class AnimalController extends Controller
         $animal['ds_breed'] = $req['ds_breed'];
         $animal['ds_bio'] = $req['ds_bio'];
         $animal['dt_born'] = $req['dt_born'];
+
+        if ($req->file('photo_edit')) {
+            $path = $req->file('photo_edit')->store('animal');
+            $animal['img_animal'] = $path;
+        }
+
         $animal['img_animal'] = $req['img_animal'];
+
+
 
         $animal->save();
 

@@ -29,7 +29,7 @@ class HomeController extends Controller
         $user = user::find($req->session()->has('user'));
         $animal = animals::find($id);
         //return $animal;
-        return view('admin/editAnimal', compact('user', 'animal'));
+        return view('landing.editAnimal', compact('user', 'animal'));
     }
 
     public function loadProfile(Request $req) {
