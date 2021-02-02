@@ -28,7 +28,7 @@
                     <a class="nav-link menu-link" href="/">Home</a>
                 </li>
                 <li class="nav-item menu-item">
-                    <a class="nav-link menu-link" href="#">Contato</a>
+                    <a class="nav-link menu-link" href="/adocao">Adoção</a>
                 </li>
                 <li class="nav-item menu-item">
                     <a class="nav-link menu-link" href="{{ Session::has('user') ? '/cadastro-animal' : '/cadastro-usuario' }}">{{ Session::has('user') ? 'Cadastrar animal' : 'Registre-se' }}</a>
