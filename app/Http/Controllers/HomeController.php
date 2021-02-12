@@ -22,9 +22,10 @@ class HomeController extends Controller
         $user->fill($req->all());
         $user->save();
 
-        return redirect('/adocao');
+        return redirect('/animais');
     }
 
+    //loadPages
     public function loadEditAnimal(Request $req, $id) {
         $user = user::find($req->session()->has('user'));
         $animal = animals::find($id);
@@ -34,7 +35,6 @@ class HomeController extends Controller
 
     public function loadProfile(Request $req) {
         $user = user::find($req->session()->has('user'));
-        /* $animals = animals::where('id_animal', $user['id_user']); */
         $animals = animals::get();
         return view('landing/profile', compact('user', 'animals'));
     }
@@ -44,7 +44,6 @@ class HomeController extends Controller
         if (isset($users['img_user']) && !is_null($users['img_user'])) return response()->file(storage_path('app/' . 'animals/' . $users['img_user']));
         abort(404);
     }
-    //loadPages
 
     public function loadHome(Request $req) {
         $user = user::get();
@@ -76,6 +75,10 @@ class HomeController extends Controller
         $animal->save();
         return redirect('/');
     }
+
+    // Delete animal
+
+
 
 
 }

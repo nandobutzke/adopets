@@ -17,14 +17,12 @@ class Animals extends Migration
             $table->bigIncrements('id_animal');
             $table->integer('nr_age');
             $table->string('nm_name');
-            $table->string('ds_genre');   
+            $table->string('ds_genre');
             $table->string('ds_species');
             $table->string('ds_breed');
             $table->string('img_animal')->nullable();
             $table->string('ds_bio');
             $table->date('dt_born');
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id_user')->on('user');
             $table->timestamps();
         });
     }

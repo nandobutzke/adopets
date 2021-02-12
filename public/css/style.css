@@ -102,6 +102,11 @@
   color: #fc6969;
 }
 
+.input-animal select {
+    border: 1px solid #FF9191 !important;
+    color: #fc6969;
+}
+
 .input-animal textarea {
   border: 1px solid #FF9191;
 }
@@ -289,7 +294,9 @@
 }
 
 .navbar-nav .dropdown-menu-profile {
-  float: left !important;
+  position: absolute;
+  left: -80px;
+  float: right !important;
   padding-right: 0.5rem 0.7rem !important;
   border: 1px solid #fc6969 !important;
 }
@@ -389,6 +396,15 @@
       font-size: 1.9rem;
     }
 
+}
+
+
+.buttons-between {
+    justify-content: space-between !important;
+}
+
+.trash-icon {
+    filter: invert(1);
 }
 
 @media(max-width: 769px) {

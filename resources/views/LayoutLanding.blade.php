@@ -28,10 +28,10 @@
                     <a class="nav-link menu-link" href="/">Home</a>
                 </li>
                 <li class="nav-item menu-item">
-                    <a class="nav-link menu-link" href="/adocao">Adoção</a>
+                    <a class="nav-link menu-link" href="/animais">Adoção</a>
                 </li>
                 <li class="nav-item menu-item">
-                    <a class="nav-link menu-link" href="{{ Session::has('user') ? '/cadastro-animal' : '/cadastro-usuario' }}">{{ Session::has('user') ? 'Cadastrar animal' : 'Registre-se' }}</a>
+                    <a class="nav-link menu-link" href="/cadastro-animal">Cadastrar animal</a>
                 </li>
                 @if(Session::has('user'))
                 <li class="nav-item menu-item d-lg-block d-none">

@@ -106,12 +106,23 @@ class AnimalController extends Controller
         }
 
         $animals->fill($req->all());
-        $animals['id_animal'] = $req->session()->get('animal')->id_animal;
+        /* $animals['id_animal'] = $req->session()->get('animal')->id_animal; */
 
         if ($animals->save()) {
-            return redirect('/adocao')->with('success', 'Animal cadastrado com sucesso!');
+            return redirect('/animais')->with('success', 'Animal cadastrado com sucesso!');
         } else {
             return redirect('/cadastro-animal')->with('error', 'Não foi possível efetuar o cadastro do animal');
         }
+    }
+
+    public function deleteAnimal(Request $req, $id) {
+        animals::destroy($id);
+
+        $req->session()->flash(
+            'delete',
+            "Sucesso! O animal foi excluído!"
+        );
+
+        return redirect('/animais');
     }
 }
