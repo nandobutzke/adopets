@@ -78,15 +78,14 @@ class AnimalController extends Controller
         $animal['ds_breed'] = $req['ds_breed'];
         $animal['ds_bio'] = $req['ds_bio'];
         $animal['dt_born'] = $req['dt_born'];
+        //$animal['img_animal'] = $req['img_animal'];
 
         if ($req->file('photo_edit')) {
             $path = $req->file('photo_edit')->store('animal');
             $animal['img_animal'] = $path;
         }
 
-        $animal['img_animal'] = $req['img_animal'];
-
-
+        $animal->fill($req->all());
 
         $animal->save();
 
@@ -97,8 +96,6 @@ class AnimalController extends Controller
     public function animalRegister(Request $req)
     {
         $animals = new animals();
-        /* $req['id_animal'] = 1;
-        $animals['id_animal'] = 1; */
 
         if ($req->file('photo')) {
             $path = $req->file('photo')->store('animal');

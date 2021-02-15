@@ -56,7 +56,7 @@
                 <div class="input-group input-animal mb-3 mt-4">
                     <div class="custom-file">
                         <label class="file-input-label" for="photo_edit">Escolha um arquivo</label>
-                        <input type="file" required name="photo_edit" class="custom-file-input" placeholder="Escolha um arquivo" id="photo_edit" aria-describedby="inputGroupFileAddon01">
+                        <input type="file" name="photo_edit" class="custom-file-input" placeholder="Escolha um arquivo" id="photo_edit" aria-describedby="inputGroupFileAddon01">
                     </div>
                 </div>
             </div>

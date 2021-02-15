@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\CheckLogin;
 use App\Http\Middleware\CheckLogout;
 /*
@@ -18,7 +19,7 @@ use App\Http\Middleware\CheckLogout;
 */
 
 //Register User & Animal
-Route::post('cadastrarUsuario', [HomeController::class, 'userRegister']);
+Route::post('cadastrarUsuario', [UserController::class, 'userRegister']);
 
 //Get animal locations
 Route::get('/', [HomeController::class, 'loadHome']);
@@ -33,10 +34,10 @@ Route::middleware([CheckLogin::class])->group(function() {
   Route::get('/perfil', [HomeController::class, 'loadProfile']);
   Route::get('/animalPopup/{id}', [AnimalController::class, 'loadAnimal']);
   Route::get('/animalImage/{id}', [AnimalController::class, 'animalImage']);
-  Route::get('/userImage/{id}', [HomeController::class, 'userImage']);
+  Route::get('/userImage/{id}', [UserController::class, 'userImage']);
   Route::post('/animalRegister', [AnimalController::class, 'animalRegister']);
   Route::post('/logout', [LoginController::class, 'logout']);
-  Route::post('/updateUser', [LoginController::class, 'updateUser']);
+  Route::post('/updateUser', [UserController::class, 'updateUser']);
   Route::get('/resultados', [AnimalController::class, 'findAnimal']);
   Route::post('/updateAnimal', [AnimalController::class, 'updateAnimal']);
   Route::get('/editar-animal/{id}', [HomeController::class, 'loadEditAnimal']);
@@ -47,12 +48,8 @@ Route::middleware([CheckLogout::class])->group(function() {
   Route::get('/acessar', [HomeController::class, 'loadLogin']);
 });
 
+/*Athentication*/
 
-
-
-//Results Routes
-/* Route::get('/animal/{id}', [HomeController::class, 'consultarAnimal']); */
-/*Autentificação*/
-Route::post('/login', [LoginController::class, 'autenticarLogin']);
+Route::post('/login', [LoginController::class, 'authenticateLogin']);
 Route::get('/logout', [LoginController::class, 'logout']);
 

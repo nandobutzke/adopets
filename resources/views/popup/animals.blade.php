@@ -29,14 +29,14 @@
                 <div class="buttons-left">
                     <form method="POST" action="/animals/delete/{{ $animal['id_animal'] }}" onsubmit="return confirm('Você tem certeza que deseja excluir esse animal?')">
                         @csrf
-                        <button type="submit" class="btn btn-danger">
+                        <button type="submit" class="btn btn-danger color-theme-1">
                             <img height="25px" class="trash-icon" src="https://img.icons8.com/wired/64/000000/empty-trash.png" />
                         </button>
                     </form>
                 </div>
                 <div class="buttons-right">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <a href="/editar-animal/{{ $animal['id_animal'] }}" type="button" class="btn btn-primary">Editar</a>
+                    <a href="/editar-animal/{{ $animal['id_animal'] }}" type="button" class="btn color-theme-1">Editar</a>
                 </div>
             </div>
         </div>
