@@ -19,8 +19,6 @@
   background-image: url("../img/toggler-icon.svg") !important;
 }
 
-
-
 #main-content .navbar .navbar-toggler  {
   padding: .50rem .50rem;
   border-color: #FF9191;
@@ -341,7 +339,6 @@
   text-align: center;
 }
 
-
 .img-animal-container {
   border: 2px solid #fc6969;
   border-radius: 5px;
@@ -430,5 +427,3 @@
     width: 160px !important;
   }
 }
-
-

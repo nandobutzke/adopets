@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class MessagesController extends Controller
 {
-    //
+    public function loadMessage() {
+
+    }
 }

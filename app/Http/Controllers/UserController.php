@@ -58,6 +58,4 @@ class UserController extends Controller
         return redirect('/perfil')->with('success', 'As informações foram salvas com sucesso');
 
     }
-
-
 }
