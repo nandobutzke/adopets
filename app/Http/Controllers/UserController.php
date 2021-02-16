@@ -13,8 +13,8 @@ class UserController extends Controller
         $user = new user();
         $req['ds_password'] = Hash::make($req['ds_password']);
 
-        if ($req->file('photo')) {
-            $path = $req->file('photo')->store('animal');
+        if ($req->file('photo_user')) {
+            $path = $req->file('photo_user')->store('animal');
             $user['img_user'] = $path;
         }
 
@@ -26,7 +26,7 @@ class UserController extends Controller
 
     public function userImage($id) {
         $users = user::find($id);
-        if (isset($users['img_user']) && !is_null($users['img_user'])) return response()->file(storage_path('app/' . 'animals/' . $users['img_user']));
+        if (isset($users['img_user']) && !is_null($users['img_user'])) return response()->file(storage_path('app/' . $users['img_user']));
         abort(404);
     }
 
@@ -43,8 +43,10 @@ class UserController extends Controller
         $user['ds_bio'] = $req['ds_bio'];
         $user['dt_birth'] = $req['dt_birth'];
 
-        if (isset($user['img_user']) || is_null($user['img_user'])) return response()->file(storage_path('app/' .  $user['img_user']));
-        /* abort(404); */
+        if ($req->file('photo_user_edit')) {
+            $path = $req->file('photo_user_edit')->store('animal');
+            $user['img_user'] = $path;
+        }
 
         if(!is_null($req['new_ds_password'])) {
             if(Hash::check($req['ds_password'], $user['ds_password'])) {

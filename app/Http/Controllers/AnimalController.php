@@ -85,7 +85,7 @@ class AnimalController extends Controller
             $animal['img_animal'] = $path;
         }
 
-        $animal->fill($req->all());
+        //$animal->fill($req->all());
 
         $animal->save();
 

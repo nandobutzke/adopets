@@ -3,7 +3,7 @@
 
 
 <div class="container mt-5 profile-container justify-content-center p-5">
-    <form method="post" action="/updateAnimal">
+    <form method="post"  action="/updateAnimal" enctype="multipart/form-data">
         @csrf
         <h2 class="mb-3 profile-title text-center">Configurações do animal</h2>
         <input type="hidden" name="id_animal" value="{{ $animal['id_animal'] }}">

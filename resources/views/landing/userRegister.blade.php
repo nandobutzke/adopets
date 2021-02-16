@@ -5,7 +5,7 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 text-center">
-                <form method="post" action="cadastrarUsuario">
+                <form method="post" action="cadastrarUsuario" enctype="multipart/form-data">
                     <h2 class="mb-3 register-title">Cadastro de usuário</h2>
                     @csrf
                     <div class="input-group input-animal mt-5">
