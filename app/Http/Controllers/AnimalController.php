@@ -57,7 +57,6 @@ class AnimalController extends Controller
 
         $animalTimeCreated = animals::where('created_at', "$date%")->get();
 
-
         return view('landing/adoption', compact('animals', 'animalTimeCreated'));
     }
     //CRUD
@@ -70,6 +69,8 @@ class AnimalController extends Controller
 
     public function updateAnimal(Request $req) {
         $animal = animals::find($req['id_animal']);
+
+        /* return $animal; */
 
         $animal['nm_name'] = $req['nm_name'];
         $animal['nr_age'] = $req['nr_age'];
@@ -89,7 +90,7 @@ class AnimalController extends Controller
 
         $animal->save();
 
-        return redirect('/perfil')->with('success', 'As informações foram salvas com sucesso');
+        return redirect('/animais')->with('success', 'As informações foram salvas com sucesso');
     }
 
 

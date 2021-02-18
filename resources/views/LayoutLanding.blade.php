@@ -44,6 +44,8 @@
                     <div class="dropdown-menu dropdown-menu-profile" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item dropdown-item-profile" href="/perfil">Meu perfil</a>
                         <div class="dropdown-divider dropdown-divider-profile"></div>
+                        <a class="dropdown-item dropdown-item-profile" href="/mensagens">Mensagens</a>
+                        <div class="dropdown-divider dropdown-divider-profile"></div>
                         <a class="dropdown-item dropdown-item-profile" href="/logout">Sair</a>
                     </div>
                 </li>
@@ -60,6 +62,31 @@
     </nav>
 
     @yield('middleContent')
+
+    <button class="open-button color-theme-1" onclick="openForm()">O que você procura?</button>
+    <div class="chat-popup" id="myForm">
+        <form method="POST" action="/messages/create" class="form-container p-3">
+            @csrf
+            <h1 class=chat-h1>Mensagens</h1>
+
+            <label for="ds_message"><b>Em que posso ajudar?</b></label>
+            <textarea placeholder="Mande uma mensagem..." name="ds_message" required></textarea>
+
+            <button type="submit" class="btn color-theme-1">Enviar</button>
+            <button type="button" class="btn cancel btn-danger" onclick="closeForm()">Fechar</button>
+        </form>
+    </div>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+
 
     <footer class="mt-5">
         <div class="container">

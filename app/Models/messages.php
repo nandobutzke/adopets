@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class messages extends Model
 {
     use HasFactory;
+
+    protected $table = 'messages';
+    protected $primaryKey = 'id_message';
+    protected $fillable = ['ds_message'];
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\CheckLogin;
 use App\Http\Middleware\CheckLogout;
@@ -42,7 +43,11 @@ Route::middleware([CheckLogin::class])->group(function() {
   Route::post('/updateAnimal', [AnimalController::class, 'updateAnimal']);
   Route::get('/editar-animal/{id}', [HomeController::class, 'loadEditAnimal']);
   Route::post('/animals/delete/{id}', [AnimalController::class, 'deleteAnimal']);
+  Route::get('/mensagens', [MessagesController::class, 'loadMessages']);
+  Route::post('/messages/delete/{id}', [MessagesController::class, 'deleteMessage']);
 });
+
+Route::post('/messages/create', [MessagesController::class, 'createMessage']);
 
 Route::middleware([CheckLogout::class])->group(function() {
   Route::get('/acessar', [HomeController::class, 'loadLogin']);
