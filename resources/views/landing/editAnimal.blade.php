@@ -3,7 +3,7 @@
 
 
 <div class="container mt-5 profile-container justify-content-center p-5">
-    <form method="post"  action="/updateAnimal" enctype="multipart/form-data">
+    <form method="post" action="/updateAnimal" enctype="multipart/form-data">
         @csrf
         <h2 class="mb-3 profile-title text-center">Configurações do animal</h2>
         <input type="hidden" name="id_animal" value="{{ $animal['id_animal'] }}">
@@ -22,12 +22,18 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="input-group input-animal mt-4">
-                    <input class="form-control form-donapets" type="text" name="ds_genre" value="{{ $animal['ds_genre'] }}" placeholder="Gênero" aria-label="">
+                    <select type="text" name="ds_genre" aria-label="Genre" placeholder="Gênero" class="form-control">
+                        <option value="Macho">Macho</option>
+                        <option value="Fêmea">Fêmea</option>
+                    </select>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <div class="input-group input-animal mt-4">
-                    <input type="text" name="ds_species" value="{{ $animal['ds_species'] }}" placeholder="Espécie" aria-label="" class="form-control form-donapets">
+                    <select type="text" name="ds_species" aria-label="Species" placeholder="Espécie" class="form-control" required>
+                        <option value="Gato">Gato</option>
+                        <option value="Cachorro">Cachorro</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -44,9 +50,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-12">
                 <div class="input-group input-animal mt-4">
-                    <input type="text" name="ds_bio" value="{{ $animal['ds_bio'] }}" placeholder="Bio" aria-label="Biography" class="form-control form-donapets">
+                    <input type="text" name="ds_bio" value="{{ $animal['ds_bio'] }}" placeholder="Descrição do animal" aria-label="Biography" class="form-control form-donapets">
                 </div>
             </div>
         </div>

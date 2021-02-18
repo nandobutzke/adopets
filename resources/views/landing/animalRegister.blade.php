@@ -4,7 +4,7 @@
 
   <div class="container mt-5 mb-5">
     <div class="row align-items-center">
-      <div class="col-12 col-md-6 justify-content-center text-center">
+      <div class="col-12 col-md-12 justify-content-center text-center">
         <h1 class="register-title">Cadastrar Animal</h1>
         <p>Basta preencher esse formulário com algumas informações do animal que deseja doar para apresentá-lo na <a class="animal-list-link" href="/animais"><strong>lista de adoção!</strong></a></p>
         <form action="/animalRegister" method="POST" enctype="multipart/form-data">

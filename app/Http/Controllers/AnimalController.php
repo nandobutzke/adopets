@@ -47,19 +47,17 @@ class AnimalController extends Controller
         $animals = $animals->get();
 
         return view('landing.results', compact('animals'));
-
     }
-
 
     public function adoptAnimal() {
         $date = date("Y-m-d H:00");
+
         $animals = animals::all();
 
         $animalTimeCreated = animals::where('created_at', "$date%")->get();
 
         return view('landing/adoption', compact('animals', 'animalTimeCreated'));
     }
-    //CRUD
 
     public function animalImage($id) {
         $animals = animals::find($id);
@@ -92,7 +90,6 @@ class AnimalController extends Controller
 
         return redirect('/animais')->with('success', 'As informações foram salvas com sucesso');
     }
-
 
     public function animalRegister(Request $req)
     {

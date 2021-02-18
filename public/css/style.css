@@ -510,6 +510,7 @@ tr td .p-limited {
   border: none;
   cursor: pointer;
   opacity: 0.8;
+  z-index: 20;
   position: fixed;
   bottom: 23px;
   right: 28px;
