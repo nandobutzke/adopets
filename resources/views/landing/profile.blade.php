@@ -10,19 +10,19 @@
         <input type="hidden" name="id_user" value="{{ $user['id_user'] }}">
         <div id="animal-list">
             <div class="row">
-                <div class="col-md-6 mt-5">
-                    <div class="card card-animal" style="width: 18rem;">
+                <div class="col-md-12 justify-content-center mt-5">
+                    <div class="card card-profile card-animal" style="width: 18rem;">
                         <a class="card-animal-link zoom" data-toggle="modal" data-target="#{{ Session::get('user')->nm_name }}">
                             <div class="card-animal-hover">
                                 <div class="card-animal-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <img src="/userImage/{{ $user['id_user'] }}" class="card-img-top card-animal-img" alt="...">
                         </a>
-                    </div>
-                    <div class="input-group input-animal mb-3 mt-4">
-                        <div class="custom-file">
-                            <label class="file-input-label" for="photo_user_edit">Escolha um arquivo</label>
-                            <input type="file" required name="photo_user_edit" class="custom-file-input" placeholder="Escolha um arquivo" id="photo_user_edit" aria-describedby="inputGroupFileAddon01">
+                        <div class="input-group input-profile-file input-animal mb-3">
+                            <div class="custom-file">
+                                <label class="file-input-label" for="photo_user_edit">Alterar imagem de perfil</label>
+                                <input type="file" required name="photo_user_edit" class="custom-file-input" placeholder="Escolha um arquivo" id="photo_user_edit" aria-describedby="inputGroupFileAddon01">
+                            </div>
                         </div>
                     </div>
                 </div>
