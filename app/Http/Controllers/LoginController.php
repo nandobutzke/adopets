@@ -18,6 +18,7 @@ class LoginController extends Controller
 
         if (Hash::check($req['ds_password'], $user['ds_password'])) {
             $req->session()->put('user', $user);
+
             return redirect('/animais');
         }
             return redirect('/acessar');
@@ -25,6 +26,7 @@ class LoginController extends Controller
 
     public function logout(Request $req) {
         $req->session()->flush();
+
         return redirect('/acessar');
     }
 }

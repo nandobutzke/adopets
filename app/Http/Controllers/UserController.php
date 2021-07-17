@@ -57,7 +57,7 @@ class UserController extends Controller
         }
 
         $user->save();
-        return redirect('/perfil')->with('success', 'As informações foram salvas com sucesso');
 
+        return redirect('/perfil')->with('success', 'As informações foram salvas com sucesso');
     }
 }
